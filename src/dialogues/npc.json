@@ -1,0 +1,10 @@
+{
+    "scene_1": {
+        "NPC": [
+            {"name": "NPC", "text": "Hai kawan"},
+            {"name": "Player", "text": "Hai juga kawan"},
+            {"name": "NPC", "text": "apakabs kawan"},
+            {"name": "Player", "text": "baik baik"}
+        ]
+    }
+}

@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/placeholders/dialogue_box.png" type="Texture" id=1]
+[ext_resource path="res://src/dialogues/DialoguePlayer.gd" type="Script" id=2]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 2 )
+dialogue_file = "res://src/dialogues/npc.json"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 74.0
+margin_top = 341.0
+margin_right = 202.0
+margin_bottom = 381.0
+rect_scale = Vector2( 5.44901, 5.44901 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 24.3, 37.1, 272.175, 81.225 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Message" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 7.0
+margin_top = 3.0
+margin_right = 315.0
+margin_bottom = 100.0
+rect_scale = Vector2( 0.371326, 0.371326 )
+text = "Message"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+margin_left = 112.0
+margin_top = 255.0
+margin_right = 143.0
+margin_bottom = 266.0
+rect_scale = Vector2( 5.6965, 5.6965 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 24.3, 37.1, 272.175, 81.225 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect2"]
+margin_left = 3.51092
+margin_top = 2.10655
+margin_right = 52.5109
+margin_bottom = 27.1066
+rect_scale = Vector2( 0.505201, 0.458099 )
+text = " Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
