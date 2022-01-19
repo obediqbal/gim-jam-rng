@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-var speed := 150.0
+var speed := 200.0
 
 
 
@@ -9,6 +9,7 @@ var speed := 150.0
 func _ready():
 	pass # Replace with function body.
 
-
-
-
+func set_active(active):
+	set_physics_process(active)
+	set_process(active)
+	set_process_input(active)
