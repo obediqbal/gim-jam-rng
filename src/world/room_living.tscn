@@ -1,36 +1,61 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://assets/placeholders/simple-black-and-white-brick-wall.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Player/Player.tscn" type="PackedScene" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 169, 189.281 )
+[ext_resource path="res://assets/placeholders/istockphoto-1204416934-170667a.jpg" type="Texture" id=3]
+[ext_resource path="res://src/actors/NPC/npc_1.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 355.5, 138.25 )
+extents = Vector2( 355.5, 104.25 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 175.5, 153.781 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 682.5, 99.75 )
+shape = SubResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="StaticBody2D/CollisionShape2D2"]
+modulate = Color( 0.560784, 0.560784, 0.560784, 1 )
+position = Vector2( -1, 33.25 )
+rotation = 3.14159
+scale = Vector2( 0.597397, -0.236306 )
+z_index = -1
+texture = ExtResource( 1 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 163, 178.719 )
+position = Vector2( 156.5, 143.219 )
+scale = Vector2( 1.00367, 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2( -1.5, 3.28125 )
-scale = Vector2( 5.26563, 5.9375 )
+modulate = Color( 0.690196, 0.690196, 0.690196, 1 )
+position = Vector2( 4.98174, 38.7813 )
+scale = Vector2( 0.304513, 0.3375 )
+z_index = -1
 texture = ExtResource( 1 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 682.5, 133.75 )
-shape = SubResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="StaticBody2D/CollisionShape2D2"]
-position = Vector2( -1, -0.749996 )
-scale = Vector2( 11.1406, 4.28125 )
-texture = ExtResource( 1 )
+[node name="NPC" parent="." instance=ExtResource( 4 )]
+position = Vector2( 609, 378 )
+scale = Vector2( 2.42073, 2.42073 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 438, 404 )
-scale = Vector2( 0.813731, 0.813731 )
+scale = Vector2( 1.09324, 1.09324 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+modulate = Color( 0.796078, 0.796078, 0.796078, 1 )
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2.50283, 1.4722 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
