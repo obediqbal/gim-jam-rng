@@ -21,6 +21,7 @@ func play(current_scene, current_npc):
 	npc = current_npc
 	
 	$Dialogue.visible = true
+	turn_off_player()
 	
 	current_dialogue_id = -1
 	next_line()
@@ -40,6 +41,7 @@ func next_line():
 	if current_dialogue_id >= len(dialogues[scene]["Him"]):
 		$Timer.start()
 		$Dialogue.visible = false
+		turn_on_player()
 		return
 	
 	$Dialogue/NinePatchRect2/Name.text = dialogues[scene]["Him"][current_dialogue_id]["name"]	
@@ -54,3 +56,15 @@ func load_dialogues():
 
 func _on_Timer_timeout():
 	is_dialogue_active = false
+
+
+func turn_on_player():
+	var player = get_tree().get_root().find_node("Player", true, false)
+	if player:
+		player.set_active(true)
+		
+
+func turn_off_player():
+	var player = get_tree().get_root().find_node("Player", true, false)
+	if player:
+		player.set_active(false)
