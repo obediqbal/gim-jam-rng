@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="gim jam"
+run/main_scene="res://src/world/world.tscn"
 config/icon="res://icon.png"
 
 [display]
