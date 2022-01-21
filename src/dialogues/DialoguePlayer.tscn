@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/placeholders/dialogue_box.png" type="Texture" id=1]
+[ext_resource path="res://assets/ui/DIALOGUE BOX WITH NAME.png" type="Texture" id=1]
 [ext_resource path="res://src/dialogues/DialoguePlayer.gd" type="Script" id=2]
 
 [node name="DialoguePlayer" type="CanvasLayer"]
@@ -16,46 +16,34 @@ __meta__ = {
 }
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Dialogue"]
-margin_left = 74.0
+margin_left = 113.598
 margin_top = 341.0
-margin_right = 202.0
+margin_right = 241.598
 margin_bottom = 381.0
-rect_scale = Vector2( 5.44901, 5.44901 )
+rect_scale = Vector2( 5.68453, 5.68453 )
 texture = ExtResource( 1 )
-region_rect = Rect2( 24.3, 37.1, 272.175, 81.225 )
+region_rect = Rect2( 25.2167, 434.324, 960.392, 326.347 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Message" type="RichTextLabel" parent="Dialogue/NinePatchRect"]
-margin_left = 3.85391
-margin_top = 3.8539
-margin_right = 311.854
-margin_bottom = 100.854
-rect_scale = Vector2( 0.371326, 0.371326 )
+[node name="Message" type="RichTextLabel" parent="Dialogue"]
+margin_left = 137.0
+margin_top = 417.0
+margin_right = 492.0
+margin_bottom = 484.0
+rect_scale = Vector2( 1.91242, 1.91242 )
 text = "Message"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="Dialogue"]
-margin_left = 93.0
-margin_top = 259.0
-margin_right = 129.0
-margin_bottom = 272.0
-rect_scale = Vector2( 5.03194, 5.03194 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 24.3, 37.1, 272.175, 81.225 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Name" type="RichTextLabel" parent="Dialogue/NinePatchRect2"]
-margin_left = 7.15429
-margin_top = 3.77588
-margin_right = 56.1543
-margin_bottom = 28.7759
-rect_scale = Vector2( 0.505201, 0.458099 )
+[node name="Name" type="RichTextLabel" parent="Dialogue"]
+margin_left = 163.0
+margin_top = 361.0
+margin_right = 215.0
+margin_bottom = 390.0
+rect_scale = Vector2( 2.2229, 2.01565 )
 text = " Name"
 __meta__ = {
 "_edit_use_anchors_": false

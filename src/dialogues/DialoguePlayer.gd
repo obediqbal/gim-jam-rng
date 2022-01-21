@@ -38,14 +38,14 @@ func _input(event):
 func next_line():
 	current_dialogue_id += 1
 	
-	if current_dialogue_id >= len(dialogues[scene]["Him"]):
+	if current_dialogue_id >= len(dialogues[scene][npc]):
 		$Timer.start()
 		$Dialogue.visible = false
 		turn_on_player()
 		return
 	
-	$Dialogue/NinePatchRect2/Name.text = dialogues[scene]["Him"][current_dialogue_id]["name"]	
-	$Dialogue/NinePatchRect/Message.text = dialogues[scene]["Him"][current_dialogue_id]["text"]
+	$Dialogue/Name.text = dialogues[scene][npc][current_dialogue_id]["name"]	
+	$Dialogue/Message.text = dialogues[scene][npc][current_dialogue_id]["text"]
 
 func load_dialogues():
 	var file = File.new()

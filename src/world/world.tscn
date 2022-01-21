@@ -8,4 +8,4 @@
 [node name="room_living" parent="." instance=ExtResource( 1 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 84, 410 )
+position = Vector2( 143, 405 )

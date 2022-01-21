@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/placeholders/simple-black-and-white-brick-wall.png" type="Texture" id=1]
+[ext_resource path="res://src/actors/NPC/6race.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/placeholders/istockphoto-1204416934-170667a.jpg" type="Texture" id=3]
-[ext_resource path="res://src/actors/NPC/npc_1.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 355.5, 139.25 )
@@ -39,9 +39,8 @@ position = Vector2( 162.178, 186.219 )
 scale = Vector2( 1.00367, 1 )
 shape = SubResource( 1 )
 
-[node name="NPC" parent="." instance=ExtResource( 4 )]
-position = Vector2( 609, 378 )
-scale = Vector2( 2.42073, 2.42073 )
+[node name="NPC" parent="." instance=ExtResource( 2 )]
+position = Vector2( 740, 368 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1

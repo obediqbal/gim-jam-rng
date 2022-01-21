@@ -1,10 +1,10 @@
 [
     {
-        "Him": [
-            {"name": "Him", "text": "Hai kawan"},
-            {"name": "Player", "text": "Hai juga kawan"},
-            {"name": "Him", "text": "apakabs kawan"},
-            {"name": "Player", "text": "baik baik"}
+        "6race": [
+            {"name": "6RACE", "text": "Hai kawan"},
+            {"name": "PLAYER", "text": "Hai juga kawan"},
+            {"name": "6RACE", "text": "apakabs kawan"},
+            {"name": "PLAYER", "text": "baik baik"}
         ]
     }
 ]
