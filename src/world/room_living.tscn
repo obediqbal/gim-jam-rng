@@ -60,7 +60,7 @@ shape = SubResource( 1 )
 position = Vector2( 740, 368 )
 
 [node name="Interactive Object" parent="." instance=ExtResource( 4 )]
-position = Vector2( 156, 168 )
+position = Vector2( 400, 360 )
 scale = Vector2( 2.59142, 2.59142 )
 collision_layer = 4
 collision_mask = 0
