@@ -22,6 +22,7 @@ func _process(delta):
 
 
 func _on_Area2D_mouse_entered():
+	print('a')
 	explanation.set_process(true)
 	outline.visible=true
 	mouse_here = true
