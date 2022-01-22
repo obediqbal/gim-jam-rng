@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/character/[STILL] 6RACE.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/NPC/6race.gd" type="Script" id=2]
@@ -8,7 +8,10 @@
 radius = 8.47511
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 7.70391 )
+extents = Vector2( 17.4006, 6.45391 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( -34, 115, -22, 121, -3, 117, 5, 111, 18, 110, 27, 116, 49, 119, 55, 108, 54, 100, 40, 98, 26, 91, 5, 87, -7, 87, -14, 95, -27, 101, -34, 104 )
 
 [node name="NPC" type="Area2D"]
 collision_layer = 2
@@ -32,8 +35,13 @@ collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 modulate = Color( 0.192157, 0, 0, 1 )
-position = Vector2( 0, 59.6865 )
+position = Vector2( 9.5, 103.843 )
 scale = Vector2( 3.07461, 3.07461 )
 shape = SubResource( 2 )
 
 [node name="DialoguePlayer" parent="." instance=ExtResource( 3 )]
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 3 )
