@@ -1,10 +1,190 @@
 [
     {
-        "6race": [
-            {"name": "6RACE", "text": "Hai kawan"},
-            {"name": "PLAYER", "text": "Hai juga kawan"},
-            {"name": "6RACE", "text": "apakabs kawan"},
-            {"name": "PLAYER", "text": "baik baik"}
-        ]
+        "room_porch": {
+            "nurse": [
+                {"name": "Nurse", "text": "Hello sir."},
+                {"name": "Player", "decision": false, "option":[
+                    "What do i do?"
+                ]},
+                {"name": "Nurse", "text": "As you know, you are the 6th patient that has entered our care. We treat all our patients with the respect they deserve. And we provide an assortment of activities and food that is sure to keep everyone’s spirits up."},
+                {"name": "Nurse", "text": "But..."},
+                {"name": "Player", "decision": false, "option":[
+                    "..."
+                ]},
+                {"name": "Nurse", "text": "The housing rules you can find by the door.  But for every resident, we also provide a customized to do list that we guarantee will help keep your body fit... and your mind healthy... More or less."},
+                {"name": "Nurse", "text": "You are free to wander the house unsupervised, however..."},
+                {"name": "Nurse", "text": "Keep in mind that this housing is old, so if you run into trouble-"},
+                {"name": "Player", "decision": false, "option":[
+                    "..."
+                ]},
+                {"name": "Nurse", "text": "Just dont run into trouble."},
+                {"name": "Nurse", "text": "Enjoy your stay!"}
+            ],
+            "!0#N": [
+                {"name": "!0#N", "text": "Go on, it'll be good for you."},
+                {"name": "!0#N", "text": "Now both sides can't bother anyone."},
+                {"name": "!0#N", "text": "Well... Unless the walls are thin here too."}
+            ],
+            "6!@$C#": [
+                {"name": "6!@$C#", "text": "I heard there was a TV in your room MC."}
+            ]
+        },
+        "room_living": {
+            "nurse": [
+                {"name": "Nurse", "text": "These are your fellow residents Owen, Sammy, Mark, and Barry."},
+                {"name": "Nurse", "text": "You should know them, they’re related to your past... One way or the other."},
+                {"name": "Player", "decision": false, "option":[
+                    "Is this everyone?",
+                    "Can I go to my room?"
+                ]},
+                {"name": "Nurse", "text": "..."},
+                {"name": "Player", "decision": false, "option":[
+                    "..."
+                ]},
+                {"name": "Nurse", "text": "Yes."}
+            ],
+            "ow3n": [
+                {"name": "OW3N", "text": "Mmm?"},
+                {"name": "Player", "decision": true, "option":[
+                    "How do I know you?",
+                    "Whats there to do here?"
+                ]},[
+                    [
+                        {"name": "OW3N", "text": "We were friernds in college. You remember?"},
+                        {"name": "Player", "decision": false, "option":[
+                            "-Shake head- Sorry.",
+                            "Uh... definitely... I remember"
+                        ]},
+                        {"name": "OW3N", "text": "Mmm..."}
+                    ],
+                    [
+                        {"name": "OW3N", "text": "I like to look at the art exhibits. They remind me of my own works. Maybe you could visit them too?"},
+                        {"name": "Player", "decision": false, "option":[
+                            "Sure.",
+                            "No thanks."
+                        ]},
+                        {"name": "OW3N", "text": "Mmm..."}
+                    ]
+                ]
+            ],
+            "ma2k": [
+                {"name": "MA2K", "text": "W-who? Oh"},
+                {"name": "Player", "decision": false, "option":[
+                    "I feel like I know you."
+                ]},
+                {"name": "MA2K", "text": "You should. We’ve known each other for so long. Was I the first to know you here?"},
+                {"name": "MA2K", "text": "..."},
+                {"name": "Player", "decision": false, "option":[
+                    "..."
+                ]},
+                {"name": "MA2K", "text": "No.. No I wasn’t. I know there was someone, but I haven’t seen their face in some time."},
+                {"name": "MA2K", "text": "I'll remember when I see them."},
+                {"name": "Player", "decision": false, "option":[
+                    "Oh okay.",
+                    "Thanks."
+                ]},
+                {"name": "MA2K", "text": "W-who... Oh?"}
+            ],
+            "b4rry": [
+                {"name": "B4RRY", "text": "Hee-hee..."},
+                {"name": "Player", "decision": true, "option":[
+                    "...",
+                    "Are the walls thin here?"
+                ]},[
+                    [],
+                    [
+                        {"name": "B4RRY", "text": "Hee-hee... Yes, seemingly so."},
+                        {"name": "Player", "decision": false, "option":[
+                            "Whats there to do here?"
+                        ]},
+                        {"name": "B4RRY", "text": "You can explore the home... Meet the residents. Hee-hee... sometimes they setup events for us to visit."},
+                        {"name": "Player", "decision": false, "option":[
+                            "Goodbye",
+                            "Interesting.",
+                            "TV time?"
+                        ]},
+                        {"name": "B4RRY", "text": "Hee-hee"}
+                    ]
+                ]
+            ],
+            "5ammy": [
+                {"name": "5AMMY", "text": "_COUGH-"},
+                {"name": "Player", "decision": true, "option":[
+                    "Are you okay?",
+                    "Have I met you before?",
+                    "What do you like to do here?"
+                ]},[
+                    [
+                        {"name": "5AMMY", "text": "Yeah I'm fine, just a seasonal cough. You know... Body isn't what it used to be."},
+                        {"name": "Player", "decision": false, "option":[
+                            "Sure",
+                            "..."
+                        ]},
+                        {"name": "5AMMY", "text": "_COUGH-"}
+                    ],
+                    [
+                        {"name": "5AMMY", "text": "I... I think so? Maybe when I was working as a _COUGH- _COUGH- _COUGH-"},
+                        {"name": "Player", "decision": false, "option":[
+                            "...",
+                            "as a..?"
+                        ]},
+                        {"name": "5AMMY", "text": "-Sniff- Sorry... Working as a _COUGH-"},
+                        {"name": "Player", "decision": false, "option":[
+                            "Nevermind."
+                        ]}
+                    ],
+                    [
+                        {"name": "5AMMY", "text": "_COUGH-"},
+                        {"name": "5AMMY", "text": "Oh dinner room, you can find me at the dinner room sometimes. They serve really delicious food sometimes."},
+                        {"name": "5AMMY", "text": "_COUGH-"},
+                        {"name": "Player", "decision": false, "option":[
+                            "Thanks."
+                        ]}
+                    ]
+                ]
+            ]
+        },
+        "room_hall": {
+            "nurse": [
+                {"name": "Nurse", "text": "The art exhibit is still under construction. Please do not endanger yourself."},
+                {"name": "Player", "decision": false, "option":[
+                    "Oh okay.",
+                    "..."
+                ]}
+            ],
+            "nurse_pass": [
+                {"name": "Nurse", "text": "Seriously do not pass. Disobeying means breaking the housing rules."}
+            ]
+        },
+        "room_dining": 
+        {
+            "nurse": [
+                {"name": "Nurse", "text": "Don't mind me, I'm just preparing the dining table."},
+                {"name": "Nurse", "text": "You will be called when it is time to eat."},
+                {"name": "Player", "decision": true, "option":[
+                    "Okay thank you.",
+                    "...",
+                    "How are you everywhere?"
+                ]}, [
+                    [],
+                    [],
+                    [
+                        {"name": "Nurse", "text": "I don't know what you mean. -Whistles-"}
+                    ]
+                ]
+            ],
+            "nurse_grab": [
+                {"name": "Player", "decision": false, "option":[
+                    "...",
+                    "What was that?"
+                ]},
+                {"name": "Nurse", "text": "For your own safety, please refrain from disobeying the nurses."},
+                {"name": "Player", "decision": false, "option":[
+                    "..."
+                ]}
+            ]
+        }
+        
+        
     }
 ]
