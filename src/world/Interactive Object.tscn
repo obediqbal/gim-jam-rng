@@ -17,7 +17,10 @@ script = ExtResource( 2 )
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = -100.0
+margin_left = 144.0
+margin_top = 70.0
+margin_right = -142.0
+margin_bottom = -170.0
 rect_clip_content = true
 texture = ExtResource( 1 )
 expand = true
