@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/maps/porch/[FRONT LAYER] PORCH.png" type="Texture" id=1]
 [ext_resource path="res://assets/maps/porch/[BG] PORCH.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/OVERLAY.png" type="Texture" id=3]
 
 [node name="Node2D" type="Node2D"]
 __meta__ = {
@@ -39,6 +40,23 @@ margin_right = 3063.0
 margin_bottom = 1949.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 304 )
+current = true
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
