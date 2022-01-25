@@ -9,11 +9,14 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
 polygon = PoolVector2Array( 168, 551, 168, 245, 298, 247, 300, 393, 448, 391, 447, 416, 455, 415, 455, 344, 325, 341, 328, 233, 353, 235, 361, 250, 455, 248, 459, 235, 581, 235, 584, 244, 679, 245, 683, 232, 691, 233, 694, 338, 574, 343, 566, 344, 568, 415, 576, 416, 577, 392, 721, 393, 721, 248, 858, 248, 859, 565, 877, 564, 875, 188, 714, 183, 715, 68, 306, 69, 306, 187, 146, 184, 149, 561, 170, 562 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
 polygon = PoolVector2Array( 161, 559, 869, 565, 869, 555, 157, 552 )
 
 [node name="TextureRect" type="TextureRect" parent="."]

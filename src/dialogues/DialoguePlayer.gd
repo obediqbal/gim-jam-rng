@@ -1,24 +1,30 @@
 extends CanvasLayer
 
-export(String, FILE, "*.json") var dialogue_file
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+export(String, FILE, "*.json") var dialogue_intro
+export(String, FILE, "*.json") var dialogue_level1
+#export(String, FILE, "*.json") var dialogue_level2
+
 var dialogues = []
 var current_dialogue_id = 0
 var scene = 0
 var npc = "NPC"
+var room = ""
 var is_dialogue_active = false
+onready var dialogue_file = [dialogue_intro, dialogue_level1]
 
-func play(current_scene, current_npc):
+func play(current_scene, current_npc, current_room):
 	if is_dialogue_active:
 		return
 	
-	dialogues = load_dialogues()
-	is_dialogue_active = true
-	
 	scene = current_scene
 	npc = current_npc
+	room = current_room
+	print(current_room)
+	print('a')
+	
+	dialogues = load_dialogues(scene)
+	is_dialogue_active = true
+	
 	
 	$Dialogue.visible = true
 	turn_off_player()
@@ -38,19 +44,19 @@ func _input(event):
 func next_line():
 	current_dialogue_id += 1
 	
-	if current_dialogue_id >= len(dialogues[scene][npc]):
+	if current_dialogue_id >= len(dialogues[room][npc]):
 		$Timer.start()
 		$Dialogue.visible = false
 		turn_on_player()
 		return
 	
-	$Dialogue/Name.text = dialogues[scene][npc][current_dialogue_id]["name"]	
-	$Dialogue/Message.text = dialogues[scene][npc][current_dialogue_id]["text"]
+	$Dialogue/Name.text = dialogues[room][npc][current_dialogue_id]["name"]	
+	$Dialogue/Message.text = dialogues[room][npc][current_dialogue_id]["text"]
 
-func load_dialogues():
+func load_dialogues(level):
 	var file = File.new()
-	if file.file_exists(dialogue_file):
-		file.open(dialogue_file, file.READ)
+	if file.file_exists(dialogue_file[level]):
+		file.open(dialogue_file[level], file.READ)
 		return parse_json(file.get_as_text())
 
 

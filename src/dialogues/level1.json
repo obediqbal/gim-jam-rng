@@ -1,0 +1,172 @@
+{
+    "room_living":{
+        "ma2k": [
+            {"name": "MA2K", "text": "OH! Hello."},
+            {"name": "Player", "decision": false, "option":[
+                "Oh hi Mark.",
+                "Hello to you too."
+            ]},
+            {"name": "MA2K", "text": "W-who? OH! You're still here."},
+            {"name": "Player", "decision": false, "option":[
+                "Ask about the papers he's reading"
+            ]},
+            {"name": "MA2K", "text": "The papers? W-Wha OH you mean the this? Yes, theres grammatical corrections on the pages, and some side notes. However, I’m still not sure what it is. "},
+            {"name": "Player", "decision": false, "option":[
+                "It could be important to somebody.",
+                "Is it a fun read?",
+                "Might I have a glance?"
+            ]},
+            {"name": "MA2K", "text": "Have a look yourself"},
+            {"name": "Player", "decision": false, "item": "manuscript", "option":[
+                "Look at the manuscripts"
+            ]},
+            {"name": "MA2K", "text": "..."},
+            {"name": "Player", "text": "I think it's part of a ", "decision": false, "option":[
+                "Manuscript.",
+                "Speech.",
+                "Fanfiction."
+            ]},
+            {"name": "MA2K", "text": "W-what? OH it might be... So what are you up to now?"},
+            {"name": "Player", "decision": false, "option":[
+                "Finishing my to do list and meeting the nurse.",
+                "Looking for ghosts",
+                "Meeting everyone?"
+            ]},
+            {"name": "MA2K", "text": "W-Who? OH!"}
+        ],
+        "b4rry":[
+            {"name": "B4RRY", "text": "Hee-hee, do you wanna play cards?"},
+            {"name": "Player", "decision": true, "option":[
+                "Sure",
+                "No thanks"
+            ]}, [
+                [
+                  {"name": "B4RRY", "text": "Hee-hee very fun. So, do you know any 3 player games?"},
+                  {"name": "Player", "text": "..."},
+                  {"name": "Player", "text": "You mean me, right?"},
+                  {"name": "B4RRY", "text": "Of course you, it’s not like theres anyone else here. Hee-hee."},
+                  {"name": "Player", "text": "..."},
+                  {"name": "Player", "decision": false, "option":[
+                    "I'm just gonna go.",
+                    "Goodbye"
+                    ]},
+                  {"name": "B4RRY", "text": "I wonder which one said that. Hee-hee."}
+                ],
+                [
+                  {"name": "B4RRY", "text": "Oh? alright then, I guess its just the two us then, hee-hee."}
+                ]
+            ]
+        ]
+    },
+    "room_dining":{
+        "5ammy":[
+            {"name": "5AMMY", "text": "_COUGH-_COUGH-"},
+            {"name": "5AMMY", "text": "-visible suffering-"},
+            {"name": "5AMMY", "text": "_COUGH-"},
+            {"name": "Player", "decision": true, "option":[
+                "Give him his water",
+                "Please close your mouth",
+                "Hows the food?"
+            ]}, [
+                [
+                    {"name": "5AMMY", "text": "-Gulp- Thank you. The food tastes so good that I ended up coughing."},
+                            {"name": "Player", "decision": false, "option":[
+                                "Its okay"
+                            ]}, 
+                            {"name": "5AMMY", "text": "-he puts down his utensils- You want to chat? Okay then."},
+                            {"name": "Player", "decision": false, "option":[
+                                "Why is it so dark in here?",
+                                "Whats new?"
+                            ]}
+                ],
+                [
+                    {"name": "5AMMY", "text": "_COUGH-_COUGH-"},
+                    {"name": "Player", "decision": true, "option":[
+                        "Oh righty, give him his water",
+                        "Are you done?"
+                    ]}, [
+                        [
+                            {"name": "5AMMY", "text": "-Gulp- Thank you. The food tastes so good that I ended up coughing."},
+                            {"name": "Player", "decision": false, "option":[
+                                "Its okay"
+                            ]}, 
+                            {"name": "5AMMY", "text": "-he puts down his utensils- You want to chat? Okay then."},
+                            {"name": "Player", "decision": false, "option":[
+                                "Why is it so dark in here?",
+                                "Whats new?"
+                            ]}
+                        ],
+                        [
+                            {"name": "5AMMY", "text": "Yes.. yes..."},
+                            {"name": "5AMMY", "text": "-he puts down his utensils- You want to chat? Okay then."},
+                            {"name": "Player", "decision": false, "option":[
+                                "Why is it so dark in here?",
+                                "Whats new?"
+                            ]}
+                        ]
+                    ]
+                ],
+                [
+                    {"name": "5AMMY", "text": "_COUGH-_COUGH-"},
+                    {"name": "Player", "decision": true, "option":[
+                        "Oh righty, give him his water",
+                        "Are you done?"
+                    ]}, [
+                        [
+                            {"name": "5AMMY", "text": "-Gulp- Thank you. The food tastes so good that I ended up coughing."},
+                            {"name": "Player", "decision": false, "option":[
+                                "Its okay"
+                            ]}, 
+                            {"name": "5AMMY", "text": "-he puts down his utensils- You want to chat? Okay then."},
+                            {"name": "Player", "decision": false, "option":[
+                                "Why is it so dark in here?",
+                                "Whats new?"
+                            ]}
+                        ],
+                        [
+                            {"name": "5AMMY", "text": "Yes.. yes..."},
+                            {"name": "5AMMY", "text": "-he puts down his utensils- You want to chat? Okay then."},
+                            {"name": "Player", "decision": false, "option":[
+                                "Why is it so dark in here?",
+                                "Whats new?"
+                            ]}
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    },
+    "room_hall":{
+        "ow3n":[
+            {"name":"", "text": "OW3n is standing"},
+            {"name":"OW3n", "text": "Talks about orwell george. Did you know that was his pen name? Mmm... His name.. Now what was his real name again.."},
+            {"name": "Player", "decision": false, "option":[
+                "Eric Arthur Blair"
+            ]},
+            {"name":"OW3n", "text": "Mmm... Yes.. Yes thats right.. Mr Eris Arthur Blair."},
+            {"name":"OW3n", "text": "Mmm... Thats not common knowledge... How do you know that?"},
+            {"name": "Player", "decision": false, "option":[
+                "umm idk.",
+                "I read it in a book?",
+                "It's a common name."
+            ]},
+            {"name":"OW3n", "text": "Mmm... Oh silly me... you were the on who studied him wasn't it? Mmm..."},
+            {"name":"OW3n", "text": "Master? Master of words? No.. no thats not it."},
+            {"name": "Player", "decision": false, "option":[
+                "Master of arts.",
+                "Master jedi.",
+                "Master and slave."
+            ]},
+            {"name":"OW3n", "text": "Mmm... Master of arts, i think it was?..."},
+            {"name":"OW3n", "text": "Mmm... Yes, yes i think i remember making fun of you for it. Mhm... not a real job."},
+            {"name":"OW3n", "text": "Congratulations on the book release by the way. Mhm... I really like reading..."},
+            {"name":"OW3n", "text": "Mmm... what was it? Mmm.."},
+            {"name": "Player", "decision": false, "option":[
+                "B-book release?",
+                "Thanks.",
+                "Mmm..?"
+            ]},
+            {"name":"OW3n", "text": "Mmm..."}
+        ]
+    }
+}

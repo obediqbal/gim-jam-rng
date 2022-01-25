@@ -1,7 +1,8 @@
 extends Area2D
 
-onready var scene = 0
+export var level = 0
 onready var npc = "NPC"
+export var room = ""
 
 
 func _input(event):
@@ -12,4 +13,4 @@ func _input(event):
 func find_and_use_dialogue():
 	var dialogue_player = get_node_or_null("DialoguePlayer")
 	if dialogue_player:
-		dialogue_player.play(scene, npc)
+		dialogue_player.play(level, npc, room)
