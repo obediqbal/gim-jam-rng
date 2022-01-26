@@ -9,6 +9,7 @@
 [sub_resource type="RectangleShape2D" id=2]
 
 [node name="NPC" type="Area2D"]
+scale = Vector2( 0.733266, 0.733266 )
 collision_layer = 2
 script = ExtResource( 3 )
 
