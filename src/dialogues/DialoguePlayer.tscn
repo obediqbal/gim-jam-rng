@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/ui/DIALOGUE BOX WITH NAME.png" type="Texture" id=1]
 [ext_resource path="res://src/dialogues/DialoguePlayer.gd" type="Script" id=2]
+[ext_resource path="res://assets/ui/DIALOGUE BOX NO NAME.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/CHOICE BOX.png" type="Texture" id=4]
 
 [node name="DialoguePlayer" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -9,14 +11,14 @@ dialogue_intro = "res://src/dialogues/intro.json"
 dialogue_level1 = "res://src/dialogues/level1.json"
 
 [node name="Dialogue" type="NinePatchRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 rect_scale = Vector2( 1.09157, 1.00109 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Dialogue"]
+[node name="WithName" type="NinePatchRect" parent="Dialogue"]
 margin_left = 113.598
 margin_top = 341.0
 margin_right = 241.598
@@ -28,27 +30,112 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Name" type="RichTextLabel" parent="Dialogue/WithName"]
+margin_left = 8.69061
+margin_top = 3.51832
+margin_right = 60.6906
+margin_bottom = 32.5183
+rect_scale = Vector2( 0.339735, 0.30806 )
+text = " Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NoName" type="NinePatchRect" parent="Dialogue"]
+margin_left = 113.598
+margin_top = 341.0
+margin_right = 241.598
+margin_bottom = 381.0
+rect_scale = Vector2( 5.68453, 5.68453 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 25.2167, 434.324, 960.392, 326.347 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Message" type="RichTextLabel" parent="Dialogue"]
-margin_left = 137.0
+margin_left = 149.0
 margin_top = 417.0
-margin_right = 492.0
+margin_right = 490.0
 margin_bottom = 484.0
-rect_scale = Vector2( 1.91242, 1.91242 )
+rect_scale = Vector2( 1.98182, 1.98182 )
 text = "Message"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Name" type="RichTextLabel" parent="Dialogue"]
-margin_left = 163.0
-margin_top = 361.0
-margin_right = 215.0
-margin_bottom = 390.0
-rect_scale = Vector2( 2.2229, 2.01565 )
-text = " Name"
+[node name="Options" type="NinePatchRect" parent="Dialogue"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Choice1" type="NinePatchRect" parent="Dialogue/Options"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.0
+margin_top = -223.084
+margin_right = 127.0
+margin_bottom = -128.084
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option" type="RichTextLabel" parent="Dialogue/Options/Choice1"]
+margin_left = 26.0
+margin_top = 26.0
+margin_right = 194.0
+margin_bottom = 68.0
+rect_scale = Vector2( 1.23725, 1.23725 )
+text = "First Choice"
+
+[node name="Choice2" type="NinePatchRect" parent="Dialogue/Options"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.0
+margin_top = -138.176
+margin_right = 127.0
+margin_bottom = -43.1764
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option" type="RichTextLabel" parent="Dialogue/Options/Choice2"]
+margin_left = 26.0
+margin_top = 26.0
+margin_right = 194.0
+margin_bottom = 68.0
+rect_scale = Vector2( 1.23725, 1.23725 )
+text = "Second Choice"
+
+[node name="Choice3" type="NinePatchRect" parent="Dialogue/Options"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.0
+margin_top = -52.27
+margin_right = 127.0
+margin_bottom = 42.73
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option" type="RichTextLabel" parent="Dialogue/Options/Choice3"]
+margin_left = 26.0
+margin_top = 26.0
+margin_right = 194.0
+margin_bottom = 68.0
+rect_scale = Vector2( 1.23725, 1.23725 )
+text = "Third Choice"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
