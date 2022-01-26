@@ -180,4 +180,5 @@ autowrap = true
 wait_time = 0.1
 one_shot = true
 
+[connection signal="pressed" from="Dialogue/Options/Choice1" to="." method="_on_Choice1_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

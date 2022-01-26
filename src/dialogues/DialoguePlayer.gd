@@ -10,6 +10,7 @@ var scene = 0
 var npc = "NPC"
 var room = ""
 var is_dialogue_active = false
+var choosing_decision = false
 onready var dialogue_file = [dialogue_intro, dialogue_level1]
 
 func play(current_scene, current_npc, current_room):
@@ -35,7 +36,7 @@ func _input(event):
 	if not is_dialogue_active:
 		return
 	
-	if event.is_action_pressed("interact"):
+	if (event.is_action_pressed("click") or event.is_action_pressed("interact")) and not choosing_decision:
 		next_line()
 	
 	
@@ -67,6 +68,7 @@ func next_line():
 		$Dialogue/WithName.visible = true
 		
 	if current_dialogue.has("decision"):
+		choosing_decision = true
 		var options = current_dialogue["option"]
 		
 		if options.size() >= 1:
@@ -107,3 +109,8 @@ func turn_off_player():
 	var player = get_tree().get_root().find_node("Player", true, false)
 	if player:
 		player.set_active(false)
+
+
+func _on_Choice1_pressed():
+	next_line()
+	choosing_decision = false
