@@ -2,7 +2,7 @@
     "room_porch": {
         "nurse": [
             {"name": "Nurse", "text": "Hello sir."},
-            {"name": "Player", "decision": false, "option":[
+            {"decision": false, "option":[
                 "What do i do?"
             ]},
             {"name": "Nurse", "text": "As you know, you are the 6th patient that has entered our care. We treat all our patients with the respect they deserve. And we provide an assortment of activities and food that is sure to keep everyone’s spirits up."},
