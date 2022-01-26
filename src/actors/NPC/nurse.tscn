@@ -9,18 +9,21 @@
 [sub_resource type="RectangleShape2D" id=2]
 
 [node name="NPC" type="Area2D"]
+collision_layer = 2
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -12.8971, -99.589 )
 scale = Vector2( 0.469675, 0.469675 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 19, 1 )
+position = Vector2( 6.10287, -98.589 )
 scale = Vector2( 15.0868, 15.0868 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -12.8971, -99.589 )
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]

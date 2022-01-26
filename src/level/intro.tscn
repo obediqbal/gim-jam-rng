@@ -4,12 +4,12 @@
 [ext_resource path="res://src/actors/NPC/nurse.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/level/intro.gd" type="Script" id=3]
 
-[node name="intro" type="Node2D"]
+[node name="intro" type="YSort"]
 script = ExtResource( 3 )
 
-[node name="room_porch" parent="." instance=ExtResource( 1 )]
-
-[node name="NPC" parent="room_porch" instance=ExtResource( 2 )]
-position = Vector2( 228, 248 )
+[node name="NPC" parent="." instance=ExtResource( 2 )]
+position = Vector2( 248, 477 )
 scale = Vector2( 0.590551, 0.590551 )
 room = "room_porch"
+
+[node name="room_porch" parent="." instance=ExtResource( 1 )]
