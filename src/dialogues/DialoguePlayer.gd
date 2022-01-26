@@ -114,3 +114,13 @@ func turn_off_player():
 func _on_Choice1_pressed():
 	next_line()
 	choosing_decision = false
+
+
+func _on_Choice2_pressed():
+	next_line()
+	choosing_decision = false
+
+
+func _on_Choice3_pressed():
+	next_line()
+	choosing_decision = false
