@@ -71,13 +71,13 @@ func next_line():
 		
 		if options.size() >= 1:
 			$Dialogue/Options/Choice1.visible = true
-			$Dialogue/Options/Choice1/Option.text = options[0]
+			$Dialogue/Options/Choice1/ChoiceContainer/Option.text = options[0]
 		if options.size() >= 2:
 			$Dialogue/Options/Choice2.visible = true
-			$Dialogue/Options/Choice2/Option.text = options[1]
+			$Dialogue/Options/Choice2/ChoiceContainer/Option.text = options[1]
 		if options.size() >= 3:
 			$Dialogue/Options/Choice3.visible = true
-			$Dialogue/Options/Choice3/Option.text = options[2]
+			$Dialogue/Options/Choice3/ChoiceContainer/Option.text = options[2]
 			
 		if current_dialogue["decision"]:
 			pass
