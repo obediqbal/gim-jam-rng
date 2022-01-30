@@ -45,9 +45,7 @@ func _input(event):
 	
 	
 func next_line():
-	
 	current_dialogue_id += 1
-	
 	
 	if current_dialogue_id >= len(dialogues[room][npc]):
 		$Timer.start()
@@ -63,14 +61,6 @@ func next_line():
 		current_parent = dialogues[room][npc]
 		
 	current_dialogue = current_parent[current_dialogue_id]
-	print(current_parent)
-	print(current_dialogue)
-	print('----')
-	
-	#if decision != -1 && current_dialogue.get("decision"):
-	#	current_parent = current_parent[current_dialogue_id+1][decision]
-	#	decision = -1
-	
 		
 	# atribut "name" kosong maka gunakan Dialogue Box NoName
 	if current_dialogue.has("name") and current_dialogue["name"]=="":
