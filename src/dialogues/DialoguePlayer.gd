@@ -4,13 +4,16 @@ export(String, FILE, "*.json") var dialogue_intro
 export(String, FILE, "*.json") var dialogue_level1
 #export(String, FILE, "*.json") var dialogue_level2
 
-var dialogues = []
+var dialogues = {}
 var current_dialogue_id = 0
 var scene = 0
 var npc = "NPC"
 var room = ""
 var is_dialogue_active = false
 var choosing_decision = false
+var decision = -1
+var current_parent = []
+var current_dialogue = {}
 onready var dialogue_file = [dialogue_intro, dialogue_level1]
 
 func play(current_scene, current_npc, current_room):
@@ -26,6 +29,7 @@ func play(current_scene, current_npc, current_room):
 	
 	
 	$Dialogue.visible = true
+	current_parent = []
 	turn_off_player()
 	
 	current_dialogue_id = -1
@@ -53,8 +57,15 @@ func next_line():
 	$Dialogue/Options/Choice1.visible = false
 	$Dialogue/Options/Choice2.visible = false
 	$Dialogue/Options/Choice3.visible = false
+	
+	if len(current_parent)==0:
+		current_parent = dialogues[room][npc]
 		
-	var current_dialogue = dialogues[room][npc][current_dialogue_id]
+	current_dialogue = current_parent[current_dialogue_id]
+	
+	if decision != -1 && current_dialogue.get("decision"):
+		current_parent = current_parent[current_dialogue_id+1][decision]
+		decision = -1
 		
 	# atribut "name" kosong maka gunakan Dialogue Box NoName
 	if current_dialogue.has("name") and current_dialogue["name"]=="":
@@ -82,7 +93,8 @@ func next_line():
 			$Dialogue/Options/Choice3/ChoiceContainer/Option.text = options[2]
 			
 		if current_dialogue["decision"]:
-			pass
+			current_dialogue_id = -1
+			
 		else:
 			pass
 	if current_dialogue.has("text"):
@@ -114,13 +126,16 @@ func turn_off_player():
 func _on_Choice1_pressed():
 	next_line()
 	choosing_decision = false
+	decision = 0
 
 
 func _on_Choice2_pressed():
 	next_line()
 	choosing_decision = false
+	decision = 1
 
 
 func _on_Choice3_pressed():
 	next_line()
-	choosing_decision = false
+	choosing_decision = false	
+	decision = 2
