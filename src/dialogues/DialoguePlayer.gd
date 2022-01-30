@@ -45,6 +45,7 @@ func _input(event):
 	
 	
 func next_line():
+	
 	current_dialogue_id += 1
 	
 	
@@ -62,10 +63,14 @@ func next_line():
 		current_parent = dialogues[room][npc]
 		
 	current_dialogue = current_parent[current_dialogue_id]
+	print(current_parent)
+	print(current_dialogue)
+	print('----')
 	
-	if decision != -1 && current_dialogue.get("decision"):
-		current_parent = current_parent[current_dialogue_id+1][decision]
-		decision = -1
+	#if decision != -1 && current_dialogue.get("decision"):
+	#	current_parent = current_parent[current_dialogue_id+1][decision]
+	#	decision = -1
+	
 		
 	# atribut "name" kosong maka gunakan Dialogue Box NoName
 	if current_dialogue.has("name") and current_dialogue["name"]=="":
@@ -77,6 +82,9 @@ func next_line():
 			$Dialogue/WithName/Name.text = current_dialogue["name"]
 		$Dialogue/NoName.visible = false
 		$Dialogue/WithName.visible = true
+		
+	if current_dialogue.has("text"):
+		$Dialogue/Message.text = current_dialogue["text"]
 		
 	if current_dialogue.has("decision"):
 		choosing_decision = true
@@ -91,14 +99,7 @@ func next_line():
 		if options.size() >= 3:
 			$Dialogue/Options/Choice3.visible = true
 			$Dialogue/Options/Choice3/ChoiceContainer/Option.text = options[2]
-			
-		if current_dialogue["decision"]:
-			current_dialogue_id = -1
-			
-		else:
-			pass
-	if current_dialogue.has("text"):
-		$Dialogue/Message.text = current_dialogue["text"]
+
 
 func load_dialogues(level):
 	var file = File.new()
@@ -124,18 +125,27 @@ func turn_off_player():
 
 
 func _on_Choice1_pressed():
+	decision = 0
+	if(current_dialogue["decision"]):
+		current_parent = current_parent[current_dialogue_id+1][decision]
+		current_dialogue_id = -1
 	next_line()
 	choosing_decision = false
-	decision = 0
 
 
 func _on_Choice2_pressed():
+	decision = 1
+	if(current_dialogue["decision"]):
+		current_parent = current_parent[current_dialogue_id+1][decision]
+		current_dialogue_id = -1
 	next_line()
 	choosing_decision = false
-	decision = 1
 
 
 func _on_Choice3_pressed():
+	decision = 2
+	if(current_dialogue["decision"]):
+		current_parent = current_parent[current_dialogue_id+1][decision]
+		current_dialogue_id = -1
 	next_line()
 	choosing_decision = false	
-	decision = 2
