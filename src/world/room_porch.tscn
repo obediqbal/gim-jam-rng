@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/maps/porch/[BG] PORCH.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/OVERLAY.png" type="Texture" id=3]
 
-[node name="Node2D" type="Node2D"]
+[node name="room_porch" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 476.0, 515.0, 352.0, 391.0 ]
 }
