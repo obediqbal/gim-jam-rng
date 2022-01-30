@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/actors/NPC/nurse.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/world/room_living.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/actors/NPC/owen.tscn" type="PackedScene" id=3]
+
+[node name="living" type="YSort"]
+
+[node name="nurse" parent="." instance=ExtResource( 1 )]
+position = Vector2( 354, 290 )
+scale = Vector2( 0.567038, 0.567038 )
+room = "room_living"
+
+[node name="room_living" parent="." instance=ExtResource( 2 )]
+
+[node name="owen" parent="." instance=ExtResource( 3 )]
+position = Vector2( 601, 383 )
+room = "room_living"
