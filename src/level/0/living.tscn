@@ -6,12 +6,12 @@
 
 [node name="living" type="YSort"]
 
+[node name="room_living" parent="." instance=ExtResource( 2 )]
+
 [node name="nurse" parent="." instance=ExtResource( 1 )]
 position = Vector2( 354, 290 )
 scale = Vector2( 0.567038, 0.567038 )
 room = "room_living"
-
-[node name="room_living" parent="." instance=ExtResource( 2 )]
 
 [node name="owen" parent="." instance=ExtResource( 3 )]
 position = Vector2( 601, 383 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/ui/OVERLAY.png" type="Texture" id=1]
 [ext_resource path="res://assets/maps/living room/[BG] LIVING ROOM.png" type="Texture" id=2]
@@ -9,13 +9,7 @@
 [ext_resource path="res://assets/maps/living room/[OBJECT] COUCH.png" type="Texture" id=7]
 [ext_resource path="res://assets/maps/living room/[OBJECT] ROUND DESK.png" type="Texture" id=8]
 
-[sub_resource type="CircleShape2D" id=1]
-
 [sub_resource type="RectangleShape2D" id=2]
-
-[sub_resource type="CircleShape2D" id=3]
-
-[sub_resource type="CapsuleShape2D" id=4]
 
 [node name="room_living" type="YSort"]
 
@@ -45,10 +39,10 @@ collision_layer = 4
 position = Vector2( -6.00006, -165 )
 texture = ExtResource( 6 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="safe"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="safe"]
 position = Vector2( 2.00003, -0.999939 )
 scale = Vector2( 10.9136, 5.86718 )
-shape = SubResource( 1 )
+polygon = PoolVector2Array( -6.24925, 4.92136, 0.455269, 7.89069, 6.84053, 4.92136, 9.07537, 0.764297, 6.84053, -3.98663, 2.37085, -6.95596, -3.05663, -6.36211, -6.88778, -1.61118 )
 
 [node name="couch" type="StaticBody2D" parent="."]
 position = Vector2( 298, 476 )
@@ -62,7 +56,7 @@ texture = ExtResource( 7 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="couch"]
 position = Vector2( -674, -1567 )
 scale = Vector2( 0.359203, 0.359203 )
-polygon = PoolVector2Array( 1069.03, 4426.46, 2711.56, 4409.76, 2619.69, 4045.06, 2419.58, 3925.93, 1294.37, 3935.63, 1144.2, 4020.01 )
+polygon = PoolVector2Array( 1069.03, 4426.46, 2711.56, 4409.76, 2526.28, 4129.63, 1236.17, 4149.03 )
 
 [node name="bookshelf" type="StaticBody2D" parent="."]
 position = Vector2( 464, 197 )
@@ -87,10 +81,10 @@ collision_layer = 4
 position = Vector2( -5.00012, -0.00012207 )
 texture = ExtResource( 8 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="rounddesk"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="rounddesk"]
 position = Vector2( 3.48413, 83.6228 )
 scale = Vector2( 24.2923, 17.4966 )
-shape = SubResource( 3 )
+polygon = PoolVector2Array( -9.03627, 2.78804, -5.30701, 8.36402, 5.02016, 8.16488, 8.74941, 3.38547, 5.02016, -4.77937, -4.73328, -4.97851 )
 
 [node name="blocks" type="StaticBody2D" parent="."]
 position = Vector2( 665, 235 )
@@ -101,10 +95,10 @@ collision_layer = 4
 position = Vector2( -1, -11.9999 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="blocks"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="blocks"]
 position = Vector2( -3.48486, 13.9371 )
 scale = Vector2( 15.8993, 2.09663 )
-shape = SubResource( 4 )
+polygon = PoolVector2Array( -7.88936, 13.295, -10.0808, -1.66177, -9.64255, -8.30927, -5.47871, -19.9424, 3.50642, -23.2661, 7.8894, -18.2805, 9.86176, -1.66177, 9.86176, 6.64755, 7.23196, 11.6332, -1.31487, 11.6332, -4.38297, 19.9425 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 512, 304 )
@@ -125,3 +119,10 @@ texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 0.999817, -706.286 )
+scale = Vector2( 1, 2.1475 )
+polygon = PoolVector2Array( 856, 586.396, 848, 467.188, 795, 469.051, 788, 418.294, 171, 418.294, 173, 593.847, 139, 594.313, 137, 348.445, 882, 348.445, 886, 589.656, 858, 591.519 )
