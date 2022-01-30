@@ -100,6 +100,14 @@ position = Vector2( -3.48486, 13.9371 )
 scale = Vector2( 15.8993, 2.09663 )
 polygon = PoolVector2Array( -7.88936, 13.295, -10.0808, -1.66177, -9.64255, -8.30927, -5.47871, -19.9424, 3.50642, -23.2661, 7.8894, -18.2805, 9.86176, -1.66177, 9.86176, 6.64755, 7.23196, 11.6332, -1.31487, 11.6332, -4.38297, 19.9425 )
 
+[node name="wall" type="StaticBody2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wall"]
+position = Vector2( 0.999817, -706.286 )
+scale = Vector2( 1, 2.1475 )
+polygon = PoolVector2Array( 856, 586.396, 848, 467.188, 795, 469.051, 788, 418.294, 171, 418.294, 173, 593.847, 139, 594.313, 137, 348.445, 882, 348.445, 886, 589.656, 858, 591.519 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 512, 304 )
 current = true
@@ -119,10 +127,3 @@ texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( 0.999817, -706.286 )
-scale = Vector2( 1, 2.1475 )
-polygon = PoolVector2Array( 856, 586.396, 848, 467.188, 795, 469.051, 788, 418.294, 171, 418.294, 173, 593.847, 139, 594.313, 137, 348.445, 882, 348.445, 886, 589.656, 858, 591.519 )
