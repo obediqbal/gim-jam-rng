@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D"]
 position = Vector2( -1, 0 )
 scale = Vector2( 0.95572, 0.95572 )
 collision_mask = 14
