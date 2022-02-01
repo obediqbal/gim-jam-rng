@@ -24,6 +24,10 @@ config/name="gim jam"
 run/main_scene="res://src/world/world.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SceneChanger="*res://src/UI/SceneChanger.tscn"
+
 [display]
 
 window/stretch/mode="viewport"
