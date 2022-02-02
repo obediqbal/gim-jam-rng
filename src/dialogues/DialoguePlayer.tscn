@@ -21,6 +21,7 @@ font_data = ExtResource( 5 )
 [node name="DialoguePlayer" type="CanvasLayer"]
 script = ExtResource( 2 )
 dialogue_intro = "res://src/dialogues/intro.json"
+dialogue_intro_scene = "res://src/dialogues/intro_scene.json"
 dialogue_level1 = "res://src/dialogues/level1.json"
 
 [node name="Dialogue" type="NinePatchRect" parent="."]

@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 export(String, FILE, "*.json") var dialogue_intro
+export(String, FILE, "*.json") var dialogue_intro_scene
 export(String, FILE, "*.json") var dialogue_level1
 #export(String, FILE, "*.json") var dialogue_level2
 
@@ -14,7 +15,7 @@ var choosing_decision = false
 var decision = -1
 var current_parent = []
 var current_dialogue = {}
-onready var dialogue_file = [dialogue_intro, dialogue_level1]
+onready var dialogue_file = [dialogue_intro, dialogue_intro_scene, dialogue_level1]
 
 func play(current_scene, current_npc, current_room):
 	if is_dialogue_active:
@@ -47,7 +48,10 @@ func _input(event):
 func next_line():
 	current_dialogue_id += 1
 	
-	if current_dialogue_id >= len(dialogues[room][npc]):
+	if len(current_parent)==0:
+		current_parent = dialogues[room][npc]
+		
+	if current_dialogue_id >= len(current_parent):
 		$Timer.start()
 		$Dialogue.visible = false
 		turn_on_player()
@@ -57,10 +61,9 @@ func next_line():
 	$Dialogue/Options/Choice2.visible = false
 	$Dialogue/Options/Choice3.visible = false
 	
-	if len(current_parent)==0:
-		current_parent = dialogues[room][npc]
 		
 	current_dialogue = current_parent[current_dialogue_id]
+	print(current_dialogue)
 		
 	# atribut "name" kosong maka gunakan Dialogue Box NoName
 	if current_dialogue.has("name") and current_dialogue["name"]=="":
