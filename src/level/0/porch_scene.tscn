@@ -41,7 +41,9 @@ script = ExtResource( 2 )
 [node name="room_porch" parent="." instance=ExtResource( 1 )]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 512, 304 )
+position = Vector2( 512, 224 )
+current = true
+zoom = Vector2( 0.6, 0.6 )
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
@@ -57,7 +59,7 @@ anims/black = SubResource( 1 )
 [node name="ColorRect" type="ColorRect" parent="Control"]
 margin_right = 1024.0
 margin_bottom = 600.0
-color = Color( 0, 0, 0, 0 )
+color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -66,3 +68,5 @@ __meta__ = {
 script = ExtResource( 4 )
 dialogue_intro = ""
 dialogue_level1 = ""
+
+[editable path="DialoguePlayer"]
