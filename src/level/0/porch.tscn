@@ -13,10 +13,11 @@
 position = Vector2( 351, 460 )
 room = "room_porch"
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 511, 310 )
-
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 513, 201 )
 room = "\"room_porch\""
+next_pos = Vector2( 500, 500 )
 next_room = "res://src/level/0/living.tscn"
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 0 )
