@@ -19,4 +19,4 @@ position = Vector2( 601, 383 )
 room = "room_living"
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 810, 377 )
+position = Vector2( 0, 0 )
