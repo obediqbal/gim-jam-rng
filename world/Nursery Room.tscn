@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/ui/OVERLAY.png" type="Texture" id=1]
+[ext_resource path="res://assets/maps/nursery/[BG] NURSERY.png" type="Texture" id=2]
+[ext_resource path="res://assets/maps/nursery/[FRONT LAYER] MONITOR.png" type="Texture" id=3]
+[ext_resource path="res://VISUAL ART/CHARACTER/[STILL] NURSE.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="[Bg]Nursery" type="Sprite" parent="."]
+position = Vector2( 529.969, 300.031 )
+scale = Vector2( 0.347031, 0.347031 )
+texture = ExtResource( 2 )
+
+[node name="[FrontLayer]Monitor" type="Sprite" parent="[Bg]Nursery"]
+position = Vector2( 527, 642 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 285, 597, 285, 548, 420, 548, 421, 498, 421, 360, 345, 359, 344, 214, 488, 216, 510, 210, 550, 210, 551, 183, 601, 184, 620, 223, 633, 228, 647, 225, 659, 225, 660, 340, 782, 343, 782, 600, 822, 600, 820, 1, 245, 1, 246, 599 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 284, 598, 782, 599, 451, 606 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 647, 596, 662, 574, 775, 574, 785, 574 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 3, 6 )
+polygon = PoolVector2Array( 342, 247, 430, 213, 333, 207 )
+
+[node name="overlay" type="TextureRect" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 1.0
+margin_right = 1025.0
+margin_bottom = 600.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="[Still]Nurse" type="Sprite" parent="."]
+position = Vector2( 379, 157 )
+scale = Vector2( 0.358621, 0.358621 )
+texture = ExtResource( 4 )
+flip_h = true

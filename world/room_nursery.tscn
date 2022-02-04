@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/maps/nursery/[BG] NURSERY.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 476.0, 515.0, 352.0, 391.0 ]
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+position = Vector2( 4, -70 )
+polygon = PoolVector2Array( 270, 627, 269, 112, 762, 112, 763, 628, 731, 629, 731, 407, 626, 407, 627, 305, 353, 305, 352, 462, 419, 461, 417, 585, 302, 585, 301, 628 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+light_mask = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 217.0
+margin_right = 2217.0
+margin_bottom = 2000.0
+rect_scale = Vector2( 0.300125, 0.300125 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

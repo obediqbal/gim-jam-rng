@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://VISUAL ART/MAPS/PORCH/[OBJECT] TRASHCAN.png" type="Texture" id=1]
+[ext_resource path="res://VISUAL ART/MAPS/PORCH/[BG] PORCH.png" type="Texture" id=2]
+[ext_resource path="res://VISUAL ART/MAPS/PORCH/[FRONT LAYER] PORCH.png" type="Texture" id=3]
+[ext_resource path="res://VISUAL ART/MAPS/PORCH/[OBJECT] COFFIN.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 331, 129 )
+scale = Vector2( 0.346755, 0.346755 )
+
+[node name="[Bg]Porch" type="Sprite" parent="."]
+position = Vector2( 542.333, 376.152 )
+texture = ExtResource( 2 )
+
+[node name="[FrontLayer]Porch" type="Sprite" parent="[Bg]Porch"]
+position = Vector2( 1, -6 )
+texture = ExtResource( 3 )
+
+[node name="[Object]Trashcan" type="Sprite" parent="[Bg]Porch"]
+position = Vector2( -810, -40 )
+texture = ExtResource( 1 )
+
+[node name="[Object]Coffin" type="Sprite" parent="[Bg]Porch"]
+position = Vector2( -5, 552 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -1065, 886.652 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 2009.33, -3000.5 )
+polygon = PoolVector2Array( -1628.33, 2288.67, -1555, 2288.67, -1558.33, 3382, -1591.67, 3382 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 4364.33, -3001.83 )
+polygon = PoolVector2Array( -1610, 2260, -1550, 2250, -1566.67, 3386.67, -1606.67, 3390 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 2009.33, -3000.5 )
+polygon = PoolVector2Array( 748.333, 2308.67, 268.333, 2312, 268.333, 2275.33, 755, 2275.33 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 2009.33, -3000.5 )
+polygon = PoolVector2Array( -1288.33, 2318.67, -1561.67, 2315.33, -1558.33, 2265.33, -1288.33, 2265.33 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 2009.33, -3000.5 )
+polygon = PoolVector2Array( -1291.67, 2315.33, -1288.33, 2508.67, -1275, 2625.33, -1245, 2672, -1225, 2688.67, -1168.33, 2698.67, -1095, 2735.33, -1095, 2808.67, -675, 2805.33, -658.333, 2828.67, -641.667, 2848.67, -631.667, 2858.67, -621.667, 2865.33, -611.667, 2868.67, -611.666, 2818.67, -611.666, 2772, -615, 2708.67, -621.667, 2665.33, -625, 2648.67, -631.667, 2638.67, -641.667, 2635.33, -651.667, 2632, -668.333, 2635.33, -691.667, 2638.67, -1035, 2642, -1021.67, 2438.67, -1021.67, 2122 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 2009.33, -3000.5 )
+polygon = PoolVector2Array( -208.333, 2818.67, -208.334, 2865.33, -191.666, 2862, -178.333, 2852, -168.333, 2842, -158.333, 2825.33, -151.667, 2808.67, 268.333, 2808.67, 268.333, 2295.33, 268.333, 2112, 188.333, 2125.33, 185, 2445.33, 195, 2645.33, -168.333, 2645.33, -175, 2638.67, -178.333, 2635.33, -181.667, 2635.33, -188.333, 2635.33, -195, 2635.33, -198.333, 2638.67, -201.667, 2645.33, -205, 2652, -208.333, 2662, -208.334, 2682 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 2009.33, -3000.5 )
+polygon = PoolVector2Array( -1025, 2295.33, -958.334, 2298.67, -955, 2305.33, -948.334, 2315.33, -938.334, 2328.67, -928.334, 2338.67, -918.334, 2345.33, -911.666, 2348.67, -608.333, 2345.33, -591.666, 2295.33, -181.666, 2298.67, -171.667, 2322, -165, 2332, -158.333, 2338.67, -138.333, 2338.67, -48.3334, 2338.67, 91.6666, 2335.33, 138.333, 2328.67, 145, 2325.33, 148.333, 2322, 155, 2315.33, 165, 2305.33, 185, 2298.67, 188.334, 2125.33, -218.333, 2125.33, -1031.67, 2128.67 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 2009.33, -3000.5 )
+polygon = PoolVector2Array( -1565, 3378.67, 748.334, 3385.33, 748.334, 3408.67, -1568.33, 3402 )
