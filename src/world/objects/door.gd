@@ -2,6 +2,7 @@ extends "res://src/world/objects/objects.gd"
 
 
 export var is_door_locked = false
+export(Vector2) var next_pos
 export(String, FILE) var next_room
 
 func _ready():
@@ -13,6 +14,4 @@ func _input(event):
 		if is_door_locked:
 			.find_and_use_dialogue()
 		else:
-			SceneChanger.change_scene(next_room, 'fade')
-		
-	
+			SceneChanger.change_scene(next_room, 'fade', next_pos)
