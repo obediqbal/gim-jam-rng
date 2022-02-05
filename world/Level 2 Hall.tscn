@@ -12,7 +12,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="[Bg]Hall" type="Sprite" parent="."]
-position = Vector2( 515.457, 310.375 )
+position = Vector2( 514, 335 )
 scale = Vector2( 0.244884, 0.244884 )
 texture = ExtResource( 5 )
 
@@ -28,56 +28,58 @@ texture = ExtResource( 2 )
 position = Vector2( 57, -224 )
 texture = ExtResource( 4 )
 
-[node name="[Object]BookStatueBroken" type="Sprite" parent="[Bg]Hall"]
-position = Vector2( -961, 307.922 )
-texture = ExtResource( 6 )
-
-[node name="overlay" type="TextureRect" parent="[Bg]Hall"]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -2117.15
-margin_top = -1943.77
-margin_right = 4887.85
-margin_bottom = -677.775
-rect_scale = Vector2( 4.1127, 4.1127 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="[Still]Ow3n" type="Sprite" parent="[Bg]Hall"]
+position = Vector2( -845.298, -61.2534 )
+scale = Vector2( 0.986635, 0.986635 )
+texture = ExtResource( 8 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 515.457, 310.375 )
+position = Vector2( 515.457, 335.375 )
 scale = Vector2( 0.244884, 0.244884 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( -1802.72, 112.808, -495.978, 112.808, -446.976, 141.393, -140.708, 137.31, 34.8845, 112.808, 1966.41, 112.808, 1970.49, 484.412, 2097.08, 484.412, 2085.47, -482.391, -2100.28, -478.295, -2104.38, 475.992, -1802.72, 476.245 )
+polygon = PoolVector2Array( -1810.89, 112.808, -495.978, 112.808, -446.976, 141.393, -140.708, 137.31, 34.8845, 112.808, 1966.41, 112.808, 1962.33, 480.329, 2097.08, 484.412, 2085.47, -482.391, -2100.28, -478.295, -2104.38, 475.992, -1806.8, 480.329 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2( 0, -583.688 )
 scale = Vector2( 1, 2.13404 )
-polygon = PoolVector2Array( -1806.8, 496.679, 1974.58, 497.433, 1966.41, 516.293, -1806.8, 508.161 )
+polygon = PoolVector2Array( -1806.8, 496.679, 1966.41, 496.679, 1966.41, 516.293, -1806.8, 508.161 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( 0, 81.8845 )
+position = Vector2( -8.16699, 90.0516 )
 scale = Vector2( 1, 0.848214 )
 polygon = PoolVector2Array( -1133.71, 488.278, -1031.32, 353.122, -953.501, 353.122, -887.971, 357.218, -761.006, 496.47 )
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( -961.504, 104.641, -892.083, 149.561, -753.242, 157.728, -683.822, 120.976, -647.069, 88.3071 )
+position = Vector2( 0, 16.3342 )
+polygon = PoolVector2Array( -965.588, 92.3906, -904.334, 137.31, -753.242, 137.31, -687.905, 96.4741 )
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2( 1374.3, 545.667 )
 rotation = -3.19919
-polygon = PoolVector2Array( 582.084, 116.892, 606.585, 198.563, 671.922, 223.065, 757.677, 214.898, 802.596, 169.978, 806.68, 112.808, 586.167, 84.2235 )
-
-[node name="[Still]Ow3n" type="Sprite" parent="."]
-position = Vector2( 307, 296 )
-scale = Vector2( 0.241611, 0.241611 )
-texture = ExtResource( 8 )
+polygon = PoolVector2Array( 652.453, 176.694, 742.142, 181.865, 811.367, 116.321, 566.995, 98.1398 )
 
 [node name="[Still]Nurse" type="Sprite" parent="."]
-position = Vector2( 687, 360 )
+position = Vector2( 686, 384 )
 scale = Vector2( 0.282279, 0.282279 )
 texture = ExtResource( 7 )
 flip_h = true
+
+[node name="[Object]BookStatueBroken" type="Sprite" parent="."]
+position = Vector2( 277.707, 411.18 )
+scale = Vector2( 0.244884, 0.244884 )
+texture = ExtResource( 6 )
+
+[node name="overlay" type="TextureRect" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 3.0
+margin_top = 4.0
+margin_right = 1027.0
+margin_bottom = 604.0
+rect_scale = Vector2( 0.992701, 0.992701 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

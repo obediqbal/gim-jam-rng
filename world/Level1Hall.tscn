@@ -12,8 +12,8 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="[Bg]Hall" type="Sprite" parent="."]
-position = Vector2( 514.808, 335.781 )
-scale = Vector2( 0.244161, 0.244161 )
+position = Vector2( 514, 335 )
+scale = Vector2( 0.245, 0.245 )
 texture = ExtResource( 4 )
 
 [node name="[Object]PaintingGeorgeOrwell" type="Sprite" parent="[Bg]Hall"]
@@ -28,44 +28,27 @@ texture = ExtResource( 2 )
 position = Vector2( 57, -224 )
 texture = ExtResource( 6 )
 
-[node name="[Object]BookStatueNormal" type="Sprite" parent="[Bg]Hall"]
-position = Vector2( -969.884, 246.635 )
-texture = ExtResource( 5 )
-
 [node name="StaticBody2D" type="StaticBody2D" parent="[Bg]Hall"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="[Bg]Hall/StaticBody2D"]
-polygon = PoolVector2Array( -1797.21, 430.939, -1797.21, 107.383, -502.98, 107.383, -449.736, 136.052, -146.658, 136.052, 33.5505, 103.287, 1974.89, 107.383, 1970.79, 484.183, 2077.28, 488.278, 2085.47, -482.391, -2100.28, -478.295, -2104.38, 475.992, -1797.21, 480.087 )
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="[Bg]Hall/StaticBody2D"]
+position = Vector2( -4.0957, 8.19128 )
+polygon = PoolVector2Array( -1797.21, 430.939, -1797.21, 107.383, -502.98, 107.383, -449.736, 136.052, -138.466, 131.958, 33.5505, 103.287, 1970.8, 107.384, 1970.79, 484.183, 2077.28, 488.278, 2085.47, -482.391, -2100.28, -478.295, -2104.38, 475.992, -1797.21, 480.087 )
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="[Bg]Hall/StaticBody2D"]
-position = Vector2( 0, -269.507 )
-scale = Vector2( 1, 1.51562 )
-polygon = PoolVector2Array( -1809.49, 480.087, 1970.79, 484.183, 1352.35, 512.852, -1805.4, 492.374 )
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="[Bg]Hall/StaticBody2D"]
+position = Vector2( 0, -294.234 )
+scale = Vector2( 1, 1.60213 )
+polygon = PoolVector2Array( -1809.49, 481.069, 1975.51, 482.097, 1352.35, 512.852, -1805.4, 492.374 )
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="[Bg]Hall/StaticBody2D"]
-position = Vector2( 0, 81.8845 )
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="[Bg]Hall/StaticBody2D"]
+position = Vector2( 0, 90.0758 )
 scale = Vector2( 1, 0.848214 )
 polygon = PoolVector2Array( -1133.71, 488.278, -1031.32, 353.122, -953.501, 353.122, -887.971, 357.218, -761.006, 496.47 )
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="[Bg]Hall/StaticBody2D"]
-polygon = PoolVector2Array( -1641.57, 107.384, -1612.9, 160.628, -1453.17, 160.628, -1371.26, 111.48, -1416.31, 45.9492 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="[Bg]Hall/StaticBody2D"]
+polygon = PoolVector2Array( 502.041, 110.204, 563.265, 191.837, 685.714, 191.837, 738.775, 114.286 )
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="[Bg]Hall/StaticBody2D"]
-polygon = PoolVector2Array( 520.935, 95.097, 541.413, 177.01, 656.092, 189.297, 733.909, 160.628, 758.483, 103.288 )
-
-[node name="overlay" type="TextureRect" parent="[Bg]Hall"]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -1907.79
-margin_top = -1912.67
-margin_right = 5097.21
-margin_bottom = -646.67
-rect_scale = Vector2( 4.1127, 4.1127 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="[Bg]Hall/StaticBody2D"]
+polygon = PoolVector2Array( -1644.9, 114.286, -1608.16, 159.184, -1448.98, 155.102, -1420.41, 114.286 )
 
 [node name="[Still]Ow3n" type="Sprite" parent="."]
 position = Vector2( 134, 321 )
@@ -77,3 +60,22 @@ position = Vector2( 674, 318 )
 scale = Vector2( 0.267049, 0.267049 )
 texture = ExtResource( 7 )
 flip_h = true
+
+[node name="[Object]BookStatueNormal" type="Sprite" parent="."]
+position = Vector2( 276.595, 398.21 )
+scale = Vector2( 0.245, 0.245 )
+texture = ExtResource( 5 )
+
+[node name="overlay" type="TextureRect" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 3.0
+margin_top = 4.0
+margin_right = 1027.0
+margin_bottom = 604.0
+rect_scale = Vector2( 0.992701, 0.992701 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

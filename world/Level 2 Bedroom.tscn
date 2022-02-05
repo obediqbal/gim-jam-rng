@@ -8,8 +8,8 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="[Bg]Bedroom" type="Sprite" parent="."]
-position = Vector2( 528.006, 308 )
-scale = Vector2( 0.496403, 0.496403 )
+position = Vector2( 524, 307 )
+scale = Vector2( 0.494, 0.494 )
 texture = ExtResource( 1 )
 
 [node name="[Object]TvAndFrame" type="Sprite" parent="[Bg]Bedroom"]
@@ -17,7 +17,7 @@ position = Vector2( -167, -62 )
 texture = ExtResource( 2 )
 
 [node name="[Object]WhiteChrysanthemum" type="Sprite" parent="[Bg]Bedroom"]
-position = Vector2( 262, -65 )
+position = Vector2( 262, -60.9514 )
 texture = ExtResource( 4 )
 
 [node name="[Object]IsabellaNovel" type="Sprite" parent="[Bg]Bedroom"]
@@ -30,10 +30,11 @@ texture = ExtResource( 3 )
 position = Vector2( 4, 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 244, 599, 246, -1, 784, 1, 785, 598, 835, 598, 836, -1, 498, -59, 192, 0, 194, 599 )
+position = Vector2( -3, 0 )
+polygon = PoolVector2Array( 246, 598, 246, 0, 782, 1, 782, 598, 835, 598, 836, -1, 498, -59, 192, 0, 194, 599 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 245, 599, 785, 598, 701, 613, 475, 618 )
+polygon = PoolVector2Array( 240, 596, 784, 596, 701, 613, 475, 618, 243, 603 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 246, 315, 302, 353, 666, 354, 688, 335, 731, 308, 782, 280, 784, 183, 241, 205 )
+polygon = PoolVector2Array( 243, 315, 297, 353, 666, 354, 690, 338, 731, 308, 781, 276, 784, 183, 241, 205 )
