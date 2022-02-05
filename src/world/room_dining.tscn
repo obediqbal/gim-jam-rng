@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/ui/OVERLAY.png" type="Texture" id=1]
-[ext_resource path="res://VISUAL ART/MAPS/DINING ROOM/[OBJECT] CHANDELIER OFF.png" type="Texture" id=2]
 [ext_resource path="res://VISUAL ART/MAPS/DINING ROOM/[OBJECT] CHAIRS.png" type="Texture" id=3]
-[ext_resource path="res://VISUAL ART/MAPS/DINING ROOM/[OBJECT] CHAIR NORMAL FRONT.png" type="Texture" id=4]
-[ext_resource path="res://VISUAL ART/MAPS/DINING ROOM/[OBJECT] PLATE AND FOOD.png" type="Texture" id=5]
 [ext_resource path="res://assets/maps/DINING ROOM/[BG]DINING ROOM.png" type="Texture" id=6]
 
 [node name="room_dining" type="YSort"]
@@ -23,6 +20,7 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 291, 576, 291, 530, 292, 197, 741, 197, 741, 576, 745, 576, 746, 35, 255, 35, 255, 577 )
@@ -35,19 +33,11 @@ polygon = PoolVector2Array( 291, 576, 744, 576, 733, 580, 290, 580 )
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2( -421.697, -37.1233 )
 scale = Vector2( 1.83758, 1.19863 )
-polygon = PoolVector2Array( 483.543, 513.669, 529.143, 512.837, 551.943, 471.225, 558.457, 420.458, 559, 315.597, 533.486, 315.597, 533.145, 259.566, 513.01, 247.886, 498.317, 247.051, 472.195, 259.566, 472.143, 317.261, 462.914, 318.093, 446.629, 318.093, 446, 361, 446.629, 422.955, 454.229, 457.909, 466.171, 482.044 )
+polygon = PoolVector2Array( 483.543, 513.669, 529.143, 512.837, 551.943, 471.225, 558.457, 420.458, 559, 315.597, 533.486, 315.597, 533.145, 259.566, 472.195, 259.566, 472.143, 317.261, 462.914, 318.093, 446.629, 318.093, 446, 361, 446.629, 422.955, 454.229, 457.909, 466.171, 482.044 )
 
 [node name="[Bg]DiningRoom" type="Sprite" parent="."]
 position = Vector2( 499, 301 )
 scale = Vector2( 0.308811, 0.308811 )
-
-[node name="[Object]ChairNormalFront" type="Sprite" parent="[Bg]DiningRoom"]
-position = Vector2( 8, 666 )
-texture = ExtResource( 4 )
-
-[node name="[Object]PlateAndFood" type="Sprite" parent="[Bg]DiningRoom"]
-position = Vector2( 3.99988, -24.0001 )
-texture = ExtResource( 5 )
 
 [node name="[Object]Chairs5" type="Sprite" parent="[Bg]DiningRoom"]
 position = Vector2( 293, 386 )
@@ -78,10 +68,6 @@ texture = ExtResource( 3 )
 hframes = 2
 region_enabled = true
 region_rect = Rect2( 32.0217, 21.0568, 292.819, 325.355 )
-
-[node name="[Object]ChandelierOff" type="Sprite" parent="[Bg]DiningRoom"]
-position = Vector2( 16, 188 )
-texture = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="[Bg]DiningRoom"]
 position = Vector2( 42.0969, 9.71466 )
