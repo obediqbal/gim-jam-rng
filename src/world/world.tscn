@@ -8,7 +8,7 @@
 anchor_left = 1.0
 anchor_bottom = 0.0
 margin_left = 594.0
-margin_top = 332.0
+margin_top = 338.0
 margin_right = 594.0
-margin_bottom = 332.0
-rect_scale = Vector2( 1.15522, 1.15522 )
+margin_bottom = 338.0
+rect_scale = Vector2( 1.16922, 1.16922 )
