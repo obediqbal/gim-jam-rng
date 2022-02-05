@@ -24,6 +24,7 @@ __meta__ = {
 visible = false
 position = Vector2( 54, 34 )
 scale = Vector2( 0.874636, 0.880194 )
+collision_layer = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
 polygon = PoolVector2Array( 285, 597, 285, 548, 420, 548, 421, 498, 421, 360, 345, 359, 344, 214, 488, 216, 510, 210, 550, 210, 551, 183, 601, 184, 620, 223, 633, 228, 647, 225, 659, 225, 660, 340, 782, 343, 782, 600, 822, 600, 820, 1, 245, 1, 246, 599 )
