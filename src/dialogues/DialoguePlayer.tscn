@@ -24,6 +24,7 @@ dialogue_intro_scene = "res://src/dialogues/intro_scene.json"
 dialogue_level1 = "res://src/dialogues/level1.json"
 
 [node name="Dialogue" type="NinePatchRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_scale = Vector2( 1.09157, 1.00109 )
