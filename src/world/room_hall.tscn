@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/ui/OVERLAY.png" type="Texture" id=1]
+[ext_resource path="res://VISUAL ART/MAPS/HALL/[BG] HALL.png" type="Texture" id=3]
+
+[node name="room_hall" type="YSort"]
+
+[node name="[Bg]Hall" type="TextureRect" parent="."]
+margin_left = 108.0
+margin_top = 88.0
+margin_right = 4476.0
+margin_bottom = 1212.0
+rect_scale = Vector2( 0.392206, 0.392206 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 964, 308 )
+scale = Vector2( 0.392206, 0.392206 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( -4.0957, 8.19128 )
+polygon = PoolVector2Array( -1797.21, 430.939, -1797.21, 107.383, -502.98, 107.383, -449.736, 136.052, -138.466, 131.958, 33.5505, 103.287, 1970.8, 107.384, 1970.79, 484.183, 2077.28, 488.278, 2085.47, -482.391, -2100.28, -478.295, -2104.38, 475.992, -1797.21, 480.087 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 0, -294.234 )
+scale = Vector2( 1, 1.60213 )
+polygon = PoolVector2Array( -1809.49, 481.069, 1975.51, 482.097, 1352.35, 512.852, -1805.4, 492.374 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 0, 90.0758 )
+scale = Vector2( 1, 0.848214 )
+polygon = PoolVector2Array( -1133.71, 488.278, -1031.32, 353.122, -953.501, 353.122, -887.971, 357.218, -761.006, 496.47 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 304 )
+current = true
+
+[node name="overlay" type="TextureRect" parent="Camera2D"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
