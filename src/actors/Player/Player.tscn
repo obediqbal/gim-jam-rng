@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/character/[STILL] MC.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Player/player_movement.gd" type="Script" id=2]
+[ext_resource path="res://assets/ui/OVERLAY.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -24,3 +25,20 @@ position = Vector2( 5.23166, -2.09266 )
 rotation = 1.5708
 scale = Vector2( 1.31534, 1.80847 )
 shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -1.19209e-07, 1.42109e-14 )
+
+[node name="overlay" type="TextureRect" parent="Camera2D"]
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
