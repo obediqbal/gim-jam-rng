@@ -4,9 +4,10 @@ extends "res://src/world/objects/objects.gd"
 export var is_door_locked = false
 export(Vector2) var next_pos
 export(String, FILE) var next_room
+export(String) var door_name
 
 func _ready():
-	object = "door"
+	object = door_name
 	$DialoguePlayer/Dialogue.visible = false
 
 func _input(event):
