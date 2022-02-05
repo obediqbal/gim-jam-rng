@@ -10,6 +10,7 @@ margin_top = 88.0
 margin_right = 4476.0
 margin_bottom = 1212.0
 rect_scale = Vector2( 0.392206, 0.392206 )
+mouse_filter = 2
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false

@@ -26,6 +26,7 @@ margin_left = 65.0
 margin_right = 3065.0
 margin_bottom = 2000.0
 rect_scale = Vector2( 0.3, 0.3 )
+mouse_filter = 2
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -36,6 +37,7 @@ margin_left = 63.0
 margin_right = 3063.0
 margin_bottom = 1949.0
 rect_scale = Vector2( 0.3, 0.3 )
+mouse_filter = 2
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -53,6 +55,7 @@ margin_left = -512.0
 margin_top = -300.0
 margin_right = 512.0
 margin_bottom = 300.0
+mouse_filter = 2
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
