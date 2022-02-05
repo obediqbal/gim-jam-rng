@@ -44,6 +44,54 @@
                 ]
             ]
 
+     
+        ]
+    }, "room_living": {
+        "scene": [
+            {"name": "", "text": "You find yourself in a modern living room, filled with comfortable seating, books on booksleves and a multitude of boardgames to spend your time."},
+            {"name": "", "text": "In the middle of the room are 4 elederly people, With one sitting on a wheel chair."},
+            {"name": "Nurse", "text": "These are your fellow residents. Owen, Sammy, Mark, and Barry."},
+            {"name": "Owen", "text": " Mm... Hey there Rob, we were friends in college. Remember? And this is Mark and Sammy!"},
+            {"name": "Mark", "text": "W-who? Huh? I’m not Mark, I’m Marcus. And Sammy is in the wheel chair. "},
+            {"name": "Owen", "text": "Mmm.. I meant. Oh bother. You know what I meant."},
+            {"anim": "nursery_door_zoom", "name": "Sammy", "text": "Typical Owen... You know, this reminds me of the old days when I was still working at the restaurant and I had this customer. Real nitpicky fellow. Clear nutjob. Absolutely hard to manage. He was there for some event... W-who? Oh I forget. But I remember... "},
+            {"name": "Owen", "text": "Wasn’t it someone I knew. I remember you telling me that?"},
+            {"decision": false, "option":["Did nobody hear that?"]},
+            {"name": "Everyone in the room", "text": "Hear what?"},
+            {"decision": false, "option":["There was banging. Coming from the door on the left."]},
+            {"name": "Owen", "text": "Mmm? Oh.. from the Nursery room? I didn’t hear anything in particular.. Mmm..."},
+            {"name": "Nurse", "text": "Me neither. That’s just the room where I manage your files and your test results...and stuff. "},
+            {"decision": false, "option":["I know what I heard."]},
+            {"name": "Nurse", "text": "..."},
+            {"name": "Nurse", "text": "That reminds me... If you ever have feelings of discomfort or if you want to get checked, come visit me in the Nursery. I'm always ready to run an assessment on your mental wellbeing."},
+            {"name": "", "text": "The Nurse turns to speak to you alone."},
+            {"name": "Nurse", "text": "With the introductions done... Shall we head for your room?"},
+            {"decision": true, "option":["Who are these people?", "Who's the 4th man?"]},[
+                [
+                    {"name": "You", "text": "And who is he?"},
+                    {"name": "Nurse", "text": "Hmm? Oh... thats Barry. He's rather... different."},
+                    {"name": "Barry", "text": "Hee-hee."},
+                    {"name": "", "text": "..."},
+                    {"name": "Nurse", "text": "Now then... If you would like to head to your room, you take the door on your right. You will find yourself in the dining room."},
+                    {"name": "Nurse", "text": "Keep going up until you reach a hallway, then continue going up, you will find your room."},
+                    {"name": "Nurse", "text": "You'll know it's yours, tt has a TV inside it."}
+                ],
+                [
+                    {"name": "You", "text": "Who are these people?"},
+                    {"name": "Nurse", "text": "These are your fellow residents, Owen, Sammy, Mark, and Barry. You should know most of them. Something about a common past... If they are bothering you let me know. I will take care of them"},
+                    {"name": "Nurse", "text": "Seriously... Let me know."},
+                    {"name": "Nurse", "text": "Now then... If you would like to head to your room, you take the door on your right. You will find yourself in the dining room."},
+                    {"name": "Nurse", "text": "Keep going up until you reach a hallway, then continue going up, you will find your room."},
+                    {"name": "Nurse", "text": "You'll know it's yours, tt has a TV inside it."}
+                
+                ]
+            ]
+        ]
+    },
+    "room_dining":{
+        "scene": [
+            {"name": "", "text": "You walk inside the room, to see a dark covered up dining room, and you hear someone tapping the windows in the background."},
+            {"name": "Nurse", "text": "Don't mind me, I'm just preparing the dining table. You will be called when it's time to eat."}
         ]
     }
 }
