@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/actors/NPC/nurse.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/world/room_living.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/NPC/owen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/actors/Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/world/objects/door.tscn" type="PackedScene" id=5]
 
 [node name="living" type="YSort"]
 
@@ -20,3 +21,15 @@ room = "room_living"
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, 0 )
+
+[node name="door_dining" parent="." instance=ExtResource( 5 )]
+position = Vector2( 859, 336 )
+room = "room_living"
+next_pos = Vector2( 340, 400 )
+next_room = "res://src/level/0/dining.tscn"
+
+[node name="door_nursery" parent="." instance=ExtResource( 5 )]
+position = Vector2( 155, 338 )
+room = "room_living"
+is_door_locked = true
+door_name = "nursery_door"
