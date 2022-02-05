@@ -8,7 +8,7 @@
 
 [sub_resource type="RectangleShape2D" id=2]
 
-[node name="nurse" type="Area2D"]
+[node name="barry" type="Area2D"]
 scale = Vector2( 0.733266, 0.733266 )
 collision_layer = 2
 script = ExtResource( 3 )
@@ -34,3 +34,17 @@ scale = Vector2( 4.55916, 1.36985 )
 shape = SubResource( 2 )
 
 [node name="DialoguePlayer" parent="." instance=ExtResource( 2 )]
+
+[node name="hover" type="Area2D" parent="."]
+
+[node name="OnHover" type="Sprite" parent="hover"]
+visible = false
+position = Vector2( -1.36376, -45.0041 )
+scale = Vector2( 0.590052, 0.590052 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hover"]
+polygon = PoolVector2Array( -50.4592, -17.7289, -49.0954, 12.2739, -17.7289, 20.4564, 21.8202, 25.9115, 50.4592, 15.0014, 57.278, -1.36376, 47.7317, -27.2752, 45.0041, -53.1867, 45.0041, -83.1895, 34.094, -103.646, 4.09128, -117.283, -21.8202, -110.465, -35.4578, -96.8271, -51.8229, -79.0982, -54.5505, -42.2766 )
+
+[connection signal="mouse_entered" from="hover" to="." method="_on_hover_mouse_entered"]
+[connection signal="mouse_exited" from="hover" to="." method="_on_hover_mouse_exited"]

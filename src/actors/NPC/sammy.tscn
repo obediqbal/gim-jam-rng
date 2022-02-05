@@ -34,3 +34,17 @@ scale = Vector2( 4.55916, 1.36985 )
 shape = SubResource( 2 )
 
 [node name="DialoguePlayer" parent="." instance=ExtResource( 2 )]
+
+[node name="hover" type="Area2D" parent="."]
+
+[node name="OnHover" type="Sprite" parent="hover"]
+visible = false
+position = Vector2( 0, -37.8226 )
+scale = Vector2( 0.562165, 0.562165 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hover"]
+polygon = PoolVector2Array( -37.8227, 19.4844, 55.0148, 19.4844, 59.5993, 3.43842, 60.7455, -17.1921, 48.1379, -24.069, 43.5534, -41.2611, 50.4302, -63.0378, 48.1379, -83.6683, 34.3842, -89.399, 16.046, -84.8144, -46.9918, -88.2529, -46.9918, -83.6683, -46.9918, -48.1379, -48.1379, -20.6305, -59.5993, -6.87685, -56.1609, 16.046 )
+
+[connection signal="mouse_entered" from="hover" to="." method="_on_hover_mouse_entered"]
+[connection signal="mouse_exited" from="hover" to="." method="_on_hover_mouse_exited"]
