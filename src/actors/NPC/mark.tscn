@@ -1,20 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/character/[STILL] OW3N.png" type="Texture" id=1]
+[ext_resource path="res://assets/character/[STILL] MA2K.png" type="Texture" id=1]
 [ext_resource path="res://src/dialogues/DialoguePlayer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/actors/NPC/owen.gd" type="Script" id=3]
+[ext_resource path="res://src/actors/NPC/nurse.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
-[sub_resource type="RectangleShape2D" id=2]
-
-[node name="owen" type="Area2D"]
-scale = Vector2( 0.803518, 0.803518 )
+[node name="mark" type="Area2D"]
+scale = Vector2( 0.733266, 0.733266 )
 collision_layer = 2
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -12.8971, -99.589 )
+position = Vector2( 2.72753, -77.7344 )
 scale = Vector2( 0.469675, 0.469675 )
 texture = ExtResource( 1 )
 
@@ -27,13 +25,7 @@ shape = SubResource( 1 )
 position = Vector2( -12.8971, -99.589 )
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 13, 100 )
-scale = Vector2( 4.55916, 1.36985 )
-shape = SubResource( 2 )
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( -8.25986, 75.943, -34.3949, 92.1218, -18.2161, 110.79, 46.4993, 115.768, 66.4118, 97.1, 35.2986, 75.943 )
+polygon = PoolVector2Array( -25.2882, 111.863, 16.9884, 117.318, 60.6288, 105.044, 81.0852, 87.3151, 46.9911, 70.95, -10.2868, 70.95, -41.6534, 94.1339 )
 
 [node name="DialoguePlayer" parent="." instance=ExtResource( 2 )]
