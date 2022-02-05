@@ -37,7 +37,7 @@ func turn_on_player():
 	var player = get_tree().get_root().find_node("Player", true, false)
 	if player:
 		player.set_active(true)
-		
+
 
 func turn_off_player():
 	var player = get_tree().get_root().find_node("Player", true, false)
