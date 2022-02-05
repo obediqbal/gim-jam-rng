@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/ui/OVERLAY.png" type="Texture" id=1]
 [ext_resource path="res://VISUAL ART/MAPS/HALL/[BG] HALL.png" type="Texture" id=3]
 
 [node name="room_hall" type="YSort"]
@@ -33,20 +32,3 @@ polygon = PoolVector2Array( -1809.49, 481.069, 1975.51, 482.097, 1352.35, 512.85
 position = Vector2( 0, 90.0758 )
 scale = Vector2( 1, 0.848214 )
 polygon = PoolVector2Array( -1133.71, 488.278, -1031.32, 353.122, -953.501, 353.122, -887.971, 357.218, -761.006, 496.47 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 512, 304 )
-current = true
-
-[node name="overlay" type="TextureRect" parent="Camera2D"]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -512.0
-margin_top = -300.0
-margin_right = 512.0
-margin_bottom = 300.0
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
