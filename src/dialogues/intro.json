@@ -1,34 +1,89 @@
 {
     "room_porch": {
+        "potted_plants": [{"name": "", "text": "It's dead plants in a pot, just twigs and stems."}
+        ],
+
         "nurse": [
-            {"name": "Nurse", "text": "Hello sir."},
+            {"name": "Nurse", "text": "Hello Mr. Walter."},
             {"decision": false, "option":[
-                "What do i do?"
+                "What do I do?"
             ]},
             {"name": "Nurse", "text": "As you know, you are the 6th patient that has entered our care. We treat all our patients with the respect they deserve. And we provide an assortment of activities and food that is sure to keep everyone’s spirits up."},
             {"name": "Nurse", "text": "But..."},
             {"decision": false, "option":[
                 "..."
             ]},
-            {"name": "Nurse", "text": "The housing rules you can find by the door.  But for every resident, we also provide a customized to do list that we guarantee will help keep your body fit... and your mind healthy... More or less."},
-            {"name": "Nurse", "text": "You are free to wander the house unsupervised, however..."},
-            {"name": "Nurse", "text": "Keep in mind that this housing is old, so if you run into trouble-"},
+            {"name": "Nurse", "text": "We also provide a customized to do list that we guarantee will help keep your mind fit!"},
             {"decision": false, "option":[
                 "..."
             ]},
-            {"name": "Nurse", "text": "Just dont run into trouble."},
-            {"name": "Nurse", "text": "Enjoy your stay!"}
+            {"name": "Nurse", "text": "Are you alright with that Mr. Walter?"},
+            {"decision": true, "option":[
+                "Accept","Refuse"
+            ]},[
+                [
+                    {"name": "", "text": "You nod and clap your hands loudly"}, 
+                    {"name": "Nurse", "text": "..."}, 
+                    {"name": "Nurse", "text": "How fun..."},
+                    {"decision": false, "option":[
+                        "..."]},
+                    {"name": "Nurse", "text": "Anyway. You are free to wander the house, under supervision of course, however, keep in mind that the housing is old, so if you run into trouble-"},
+                    {"name": "Nurse", "text": "..."},
+                    {"name": "Nurse", "text": "Just dont run into trouble. And also-"},
+                    {"name": "", "text": "The woman abruptly turns around and walks away going to her original standing position. She immidiately turns around and whipsers back to you."},
+                    {"name": "Nurse (Whispering)", "text": "Enjoy..."},
+                    {"name": "Nurse (Whispering)", "text": "Your..."},
+                    {"name": "Nurse (Whispering)", "text": "Stay..."}
+                ],
+                [
+                    {"name": "", "text": "You spit on her shoes and on the porch."}, 
+                    {"name": "Nurse", "text": "..."}, 
+                    {"name": "Nurse", "text": "We'll have to remedy that."}, 
+                    {"name": "Nurse", "text": "How fun..."}, 
+                    {"decision": false, "option":[
+                        "..."]},
+                    {"name": "Nurse", "text": "Anyway, you are free to wander the house, under supervision of course, however, keep in mind that the housing is old, so if you run into trouble-"},
+                    {"name": "Nurse", "text": "..."},
+                    {"name": "Nurse", "text": "Just dont run into trouble. And also-"},
+                    {"name": "", "text": "The woman abruptly turns around and walks away going to her original standing position. She immidiately turns around and whipsers back to you."},
+                    {"name": "Nurse (Whispering)", "text": "Enjoy..."},
+                    {"name": "Nurse (Whispering)", "text": "Your..."},
+                    {"name": "Nurse (Whispering)", "text": "Stay..."}
+
+                ]
+            ]
+            
         ],
-        "!0#N": [
-            {"name": "!0#N", "text": "Go on, it'll be good for you."},
-            {"name": "!0#N", "text": "Now both sides can't bother anyone."},
-            {"name": "!0#N", "text": "Well... Unless the walls are thin here too."}
+        "John": [
+            {"name": "Male voice:", "text": "Go on, it'll be good for you."},
+            {"name": "Male voice:", "text": "No-one here will bother you anymore. I’m 50% sure"}
         ],
-        "6!@$C#": [
-            {"name": "6!@$C#", "text": "I heard there was a TV in your room MC."}
+        "Grace": [
+            {"name": "Girl’s voice", "text": "I heard there was a TV in your room. Name and all."}
         ]
     },
     "room_living": {
+        "playing_card": [
+            {"name": "", "text": "It's a box of playing cards"}
+        ], 
+        "alice_novel":[
+            {"name": "", "text": "You see a book called 'What has Alice forgotten?' It has a girl in a blue gown on the cover, followed by the author's name Moriarty. L."}
+        ],
+        "nursery door": [
+            {"name": "", "text": "It's the door to the nursery. But it is locked."},
+            {"name": "", "text": "You hear static and buzzing from the other side. It sounds like electricity."},
+            {"decision": true, "option":[
+                "Bang on the door",
+                "Try the handle"
+            ]},[
+                [
+                    {"name": "", "text": "You knock on the door loudly. There is no reply, and the door remains silent."}
+                ],
+                [
+                    {"name": "", "text": "The door handle does not budge, and the door remains shut."}
+                ]
+            ]
+        ],
         "nurse": [
             {"name": "Nurse", "text": "These are your fellow residents Owen, Sammy, Mark, and Barry."},
             {"name": "Nurse", "text": "You should know them, they’re related to your past... One way or the other."},
@@ -43,18 +98,17 @@
             {"name": "Nurse", "text": "Yes."}
         ],
         "ow3n": [
-            {"name": "OW3N", "text": "Mmm?"},
+            {"name": "Owen", "text": "Mmm?"},
             {"decision": true, "option":[
                 "How do I know you?",
                 "Whats there to do here?"
             ]},[
                 [
-                    {"name": "OW3N", "text": "We were friernds in college. You remember?"},
-                    {"decision": false, "option":[
-                        "-Shake head- Sorry.",
-                        "Uh... definitely... I remember"
-                    ]},
-                    {"name": "OW3N", "text": "Mmm..."}
+                    {"name": "You", "text": "Why can't I remember you?"},
+                    {"name": "Owen", "text": "Well...We were friends in college. It was QUITE some time ago. Does that help at all?"},
+                    {"name": "", "text": "You slowly shake your head."},
+                    {"name": "You", "text": "Sorry... I don't-"},
+                    {"name": "Owen", "text": "Mmm... It's alright."}
                 ],
                 [
                     {"name": "OW3N", "text": "I like to look at the art exhibits. They remind me of my own works. Maybe you could visit them too?"},
@@ -67,75 +121,60 @@
             ]
         ],
         "ma2k": [
-            {"name": "MA2K", "text": "W-who? Oh"},
+            {"name": "Mark", "text": "W-who? Oh"},
             {"decision": false, "option":[
                 "I feel like I know you."
             ]},
-            {"name": "MA2K", "text": "You should. We’ve known each other for so long. Was I the first to know you here?"},
-            {"name": "MA2K", "text": "..."},
+            {"name": "Mark", "text": "You should. We’ve known each other for so long."},
             {"decision": false, "option":[
-                "..."
+                "From where?"
             ]},
-            {"name": "MA2K", "text": "No.. No I wasn’t. I know there was someone, but I haven’t seen their face in some time."},
-            {"name": "MA2K", "text": "I'll remember when I see them."},
+            {"name": "MA2K", "text": "From my sister. She's here somewhere... I think."},
+            {"name": "MA2K", "text": "I haven't seen her in some time. But when I do I'll let her that know you're here."},
             {"decision": false, "option":[
-                "Oh okay.",
                 "Thanks."
-            ]},
-            {"name": "MA2K", "text": "W-who... Oh?"}
+            ]}
         ],
+
         "b4rry": [
-            {"name": "B4RRY", "text": "Hee-hee..."},
-            {"decision": true, "option":[
-                "...",
-                "Are the walls thin here?"
-            ]},[
-                [],
-                [
-                    {"name": "B4RRY", "text": "Hee-hee... Yes, seemingly so."},
-                    {"decision": false, "option":[
-                        "Whats there to do here?"
-                    ]},
-                    {"name": "B4RRY", "text": "You can explore the home... Meet the residents. Hee-hee... sometimes they setup events for us to visit."},
-                    {"decision": false, "option":[
-                        "Goodbye",
-                        "Interesting.",
-                        "TV time?"
-                    ]},
-                    {"name": "B4RRY", "text": "Hee-hee"}
-                ]
-            ]
+            {"name": "BARRY", "text": "Hee-hee..."},
+            {"decision": false, "option":[
+                "What is there to do here?"
+            ]},
+            {"name": "B4RRY", "text": "You can explore the home... Meet the residents. Hee-hee... sometimes they setup events for us to visit."},
+            {"name": "You", "text": "Interesting..."},
+            {"name": "B4RRY", "text": "Hee-hee"}
         ],
+
         "5ammy": [
-            {"name": "5AMMY", "text": "_COUGH-"},
+            {"name": "SAMMY", "text": "_COUGH-"},
             {"decision": true, "option":[
                 "Are you okay?",
                 "Have I met you before?",
                 "What do you like to do here?"
             ]},[
                 [
-                    {"name": "5AMMY", "text": "Yeah I'm fine, just a seasonal cough. You know... Body isn't what it used to be."},
+                    {"name": "You", "text": "What is with the coughing? Are you okay?"},
+                    {"name": "SAMMY", "text": "Yeah I'm fine, just a seasonal cough. This old body isn't what it used to be."},
                     {"decision": false, "option":[
-                        "Sure",
+                        "Sure...",
                         "..."
                     ]},
-                    {"name": "5AMMY", "text": "_COUGH-"}
+                    {"name": "SAMMY", "text": "-COUGH-"}
                 ],
-                [
-                    {"name": "5AMMY", "text": "I... I think so? Maybe when I was working as a _COUGH- _COUGH- _COUGH-"},
-                    {"decision": false, "option":[
-                        "...",
-                        "as a..?"
-                    ]},
-                    {"name": "5AMMY", "text": "-Sniff- Sorry... Working as a _COUGH-"},
+                [   
+                    {"name": "You", "text": "Have... we met?"},
+                    {"name": "SAMMY", "text": "I... I think so? Maybe when I was working as a _COUGH- _COUGH- _COUGH-"},
+                    {"name": "You", "text": "Come on... Say it!"},
+                    {"name": "Sammy", "text": "-Sniff- Sorry... Working as a -COUGH-"},
                     {"decision": false, "option":[
                         "Nevermind."
                     ]}
                 ],
-                [
-                    {"name": "5AMMY", "text": "_COUGH-"},
-                    {"name": "5AMMY", "text": "Oh dinner room, you can find me at the dinner room sometimes. They serve really delicious food sometimes."},
-                    {"name": "5AMMY", "text": "_COUGH-"},
+                [   
+                    {"name": "You", "text": "What do you like to do here?"},
+                    {"name": "SAMMY", "text": "Oh, you can find me at the dinner room sometimes. They serve really delicious food sometimes."},
+                    {"name": "5AMMY", "text": "Reminds me of my recipes back in my old restaurant-COUGH-"},
                     {"decision": false, "option":[
                         "Thanks."
                     ]}
@@ -144,6 +183,10 @@
         ]
     },
     "room_hall": {
+        "glass_portrait": [
+            {"name": "", "text": "It is a window, decorated as a glass mosaic. It portrays some sort of hooded spiritual being."}
+        ],
+
         "nurse": [
             {"name": "Nurse", "text": "The art exhibit is still under construction. Please do not endanger yourself."},
             {"decision": false, "option":[
@@ -172,15 +215,52 @@
                 ]
             ]
         ],
-        "nurse_grab": [
-            {"decision": false, "option":[
-                "...",
-                "What was that?"
-            ]},
-            {"name": "Nurse", "text": "For your own safety, please refrain from disobeying the nurses."},
-            {"decision": false, "option":[
-                "..."
-            ]}
+        "brown_envelope": [
+            {"name": "", "text": "It is a sealed brown envelope..."},
+            {"name": "", "text": "Please do not open that. It is personal."},
+            {"decision": true, "option":[
+                "Open slightly",
+                "Leave"
+            ]}, [[{"name": "", "text": "You make out the words, 'Mailing details: Sender: Robert Walter. To: America Publishing inc.'"},
+                {"name": "", "text": "You only managed to glimpse at the mailing details. Before the Nurse grabs the envelope form you."},
+                {"name": "Nurse", "text": "For your own safety, please refrain from disobeying the nurses."}
+                ],[]]
+
+            ]
+    },
+    "room_bed": 
+    {
+        "iris_flower": [{"name": "", "text": "It is a lone Iris flower. You chuckle at the symbolism."}
+        ],
+        "tv_set": [{"name": "", "text": "It is a television set. You can watch it to pass the time."},
+         {"decision": true, "option":[
+            "Pass the time.",
+            "Wait."]}, [
+                [
+                {"name": "TV", "text": "The TV starts up"},
+                {"name": "TV", "text": "According to all known laws of aviation, there is no way a bee can read…"},
+                {"name": "TV", "text": "National Emergency Alert System capabilities…"},
+                {"name": "TV", "text": "This test message has been initiated by national alert and warning authorities in coordination with emergency alert system participants including broadcast, cable, satellite, and-…"},
+                {"name": "TV", "text": "-Important instructions will follow…"},
+                {"name": "TV", "text": "..."},
+                {"name": "TV", "text": "..."},
+                {"name": "", "text": "A white rabbit runs up on the screen."},
+                {"name": "TV", "text": "Hello CHILDREN! It’s me B. The bouncing bunny!"},
+                {"name": "TV", "text": "..."},
+                {"name": "TV", "text": "You wanna hear something funny?"},
+                {"name": "TV", "text": "So yesterday, I got really really really really HUNGRY right? "},
+                {"name": "TV", "text": "But at my home, I didn’t have any carrots. Oh! How sad! And my tummy was really really really really grumbling…"},
+                {"name": "TV", "text": "But then! While I was making my way to the graveyard. I fell into a hole. And inside it…"},
+                {"name": "TV", "text": "Was a bag full of carrots! And there was a note and it said..."},
+                {"name": "TV", "text": "Take a carrot whenever I am hungry.” When I saw who had written the note, it surprised me."},
+                {"name": "TV", "text": "It turns out, it was me! I forgot about them! Isn’t that funny? It’s like I was playing hide and seek with my mind!"},
+                {"name": "TV", "text": "So... Remember kids..."},
+                {"name": "TV", "text": "This ends the emergency alert broadcast."},
+                {"name": "TV", "text": "We now return you to regular programming."},
+                {"name": "TV", "text": "Playing at 12:15 PM, Apparation (1990) by Zerry Jucker."},
+                {"name": "TV", "text": "This ends the morning broadcast."}
+                ],[]
+            ]
         ]
     }
 }

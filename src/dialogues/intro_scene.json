@@ -4,7 +4,7 @@
             {"name": "", "text": "You hear a deep whisper coming from behind you."},
             {"name": "Male voice", "text": "Are you even awake?"},
             {"anim": "john_horror_zoom", "text": "… As I was saying. This way you can watch your shows without anyone bothering you. Isn’t that delightful?"},
-            {"name": "Young girl’s voice behind you", "text": "See? Didn’t I tell you? He isn’t going to listen."},
+            {"name": "Girl's voice (Behind you)", "text": "See? Didn’t I tell you? He isn’t going to listen."},
             {"anim": "grace_horror_zoom", "name": "Male voice", "text": "Oh come now… You do want to behave, don’t you?",
             "decision": true, "option":[
                 "Behave",
