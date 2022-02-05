@@ -69,10 +69,10 @@
         "alice_novel":[
             {"name": "", "text": "You see a book called 'What has Alice forgotten?' It has a girl in a blue gown on the cover, followed by the author's name Moriarty. L."}
         ],
-        "nursery door": [
+        "nursery_door": [
             {"name": "", "text": "It's the door to the nursery. But it is locked."},
             {"name": "", "text": "You hear static and buzzing from the other side. It sounds like electricity."},
-            {"decision": true, "option":[
+            {"name": "", "decision": true, "option":[
                 "Bang on the door",
                 "Try the handle"
             ]},[

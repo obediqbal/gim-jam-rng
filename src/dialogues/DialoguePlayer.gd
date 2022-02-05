@@ -14,7 +14,7 @@ var is_dialogue_active = false
 var choosing_decision = false
 var decision = -1
 var current_parent = []
-var current_dialogue = {}
+var current_dialogue = null
 onready var dialogue_file = [dialogue_intro, dialogue_intro_scene, dialogue_level1]
 
 func play(current_scene, current_npc, current_room):
@@ -47,14 +47,14 @@ func _input(event):
 	
 func next_line():
 	current_dialogue_id += 1
-	
-	if len(current_parent)==0:
+	if current_dialogue == null:
 		current_parent = dialogues[room][npc]
 		
-	if current_dialogue_id >= len(current_parent):
+	if len(current_parent)==0 or current_dialogue_id >= len(current_parent):
 		$Timer.start()
 		$Dialogue.visible = false
 		turn_on_player()
+		current_dialogue = null
 		return
 		
 	$Dialogue/Options/Choice1.visible = false
