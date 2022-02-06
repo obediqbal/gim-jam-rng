@@ -16,7 +16,7 @@ func _input(event):
 		if is_door_locked:
 			.find_and_use_dialogue()
 		else:
-			SceneChanger.change_scene(next_room, 'fade', next_pos)
+			SceneChanger.change_scene(next_room, 'fade', next_pos, door_name!="door_hall")
 
 
 func _process(delta):
@@ -27,4 +27,4 @@ func _process(delta):
 			if is_door_locked:
 				.find_and_use_dialogue()
 			else:
-				SceneChanger.change_scene(next_room, 'fade', next_pos)
+				SceneChanger.change_scene(next_room, 'fade', next_pos, door_name!="door_hall")

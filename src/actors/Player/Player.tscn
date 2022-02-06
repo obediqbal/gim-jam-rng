@@ -27,7 +27,7 @@ scale = Vector2( 1.31534, 1.80847 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( -1.19209e-07, 1.42109e-14 )
+position = Vector2( -1.19209e-07, -78.4749 )
 
 [node name="overlay" type="TextureRect" parent="Camera2D"]
 visible = false
