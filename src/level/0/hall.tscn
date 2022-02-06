@@ -35,7 +35,14 @@ texture = ExtResource( 5 )
 [node name="nurse" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1223, 428 )
 scale = Vector2( -0.978475, 0.978475 )
+room = "room_hall"
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 4, -1 )
 scale = Vector2( 1.40645, 1.40645 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 1196, 482, 1187, 452, 1191, 407, 1195, 342, 1242, 330, 1265, 363, 1262, 446, 1264, 514 )

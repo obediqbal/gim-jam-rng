@@ -27,13 +27,13 @@ position = Vector2( 0, 0 )
 
 [node name="door_living" parent="." instance=ExtResource( 4 )]
 position = Vector2( 277.318, 348.144 )
-scale = Vector2( 0.400695, 0.400695 )
+scale = Vector2( 0.332524, 0.332524 )
 next_pos = Vector2( 800, 365 )
 next_room = "res://src/level/0/living.tscn"
 
 [node name="door_hall" parent="." instance=ExtResource( 4 )]
 position = Vector2( 391.038, 173.573 )
-scale = Vector2( 0.400695, 0.400695 )
+scale = Vector2( 0.312123, 0.312123 )
 next_pos = Vector2( 1380, 450 )
 next_room = "res://src/level/0/hall.tscn"
 door_name = "door_hall"
