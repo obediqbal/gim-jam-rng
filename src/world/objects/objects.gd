@@ -21,7 +21,7 @@ func find_and_use_dialogue():
 
 
 func _process(delta):
-	if is_a_door:
+	if is_a_door or object == "tv_set":
 		return
 	if not mouse_here or len(get_overlapping_bodies())==0:
 		if not $DialoguePlayer/Dialogue.visible and not no_hover:
