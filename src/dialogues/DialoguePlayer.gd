@@ -11,7 +11,8 @@ var scene = 0
 var npc = "NPC"
 var room = ""
 var is_dialogue_active = false
-var choosing_decision = false
+var is_choosing_decision_delay = false
+var is_choosing_decision = false
 var decision = -1
 var current_parent = []
 var current_dialogue = null
@@ -41,7 +42,7 @@ func _input(event):
 	if not is_dialogue_active:
 		return
 	
-	if (event.is_action_pressed("click") or event.is_action_pressed("interact")) and not choosing_decision:
+	if (event.is_action_pressed("click") or event.is_action_pressed("interact")) and not is_choosing_decision:
 		next_line()
 	
 	
@@ -80,7 +81,9 @@ func next_line():
 		$Dialogue/Message.text = current_dialogue["text"]
 		
 	if current_dialogue.has("decision"):
-		choosing_decision = true
+		is_choosing_decision_delay = true
+		$Timer.start()
+		is_choosing_decision = true
 		var options = current_dialogue["option"]
 		
 		if options.size() >= 1:
@@ -102,7 +105,10 @@ func load_dialogues(level):
 
 
 func _on_Timer_timeout():
-	is_dialogue_active = false
+	if is_choosing_decision_delay:
+		is_choosing_decision_delay = false
+	else:
+		is_dialogue_active = false
 
 
 func turn_on_player():
@@ -118,27 +124,33 @@ func turn_off_player():
 
 
 func _on_Choice1_pressed():
+	if is_choosing_decision_delay:
+		return
 	decision = 0
 	if(current_dialogue["decision"]):
 		current_parent = current_parent[current_dialogue_id+1][decision]
 		current_dialogue_id = -1
 	next_line()
-	choosing_decision = false
+	is_choosing_decision = false
 
 
 func _on_Choice2_pressed():
+	if is_choosing_decision_delay:
+		return
 	decision = 1
 	if(current_dialogue["decision"]):
 		current_parent = current_parent[current_dialogue_id+1][decision]
 		current_dialogue_id = -1
 	next_line()
-	choosing_decision = false
+	is_choosing_decision = false
 
 
 func _on_Choice3_pressed():
+	if is_choosing_decision_delay:
+		return
 	decision = 2
 	if(current_dialogue["decision"]):
 		current_parent = current_parent[current_dialogue_id+1][decision]
 		current_dialogue_id = -1
 	next_line()
-	choosing_decision = false	
+	is_choosing_decision = false	
