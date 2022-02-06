@@ -7,6 +7,7 @@ onready var sprite = $Sprite
 onready var mouse_here = false
 export var room = ""
 onready var is_a_door = false
+onready var no_hover = false
 
 func is_input_in_area(event):
 	if event.is_action_pressed("interact") and len(get_overlapping_bodies())>0 and not $DialoguePlayer/Dialogue.visible:
@@ -23,12 +24,13 @@ func _process(delta):
 	if is_a_door:
 		return
 	if not mouse_here or len(get_overlapping_bodies())==0:
-		if not $DialoguePlayer/Dialogue.visible:
+		if not $DialoguePlayer/Dialogue.visible and not no_hover:
 			sprite.visible = true
 			hover_sprite.visible = false
 	else:
-		sprite.visible = false
-		hover_sprite.visible = true
+		if not no_hover:
+			sprite.visible = false
+			hover_sprite.visible = true
 		if Input.is_action_just_pressed("click") and not $DialoguePlayer/Dialogue.visible:
 			find_and_use_dialogue()
 			

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/actors/NPC/nurse.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/world/room_porch.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/world/objects/door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/actors/NPC/john.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/actors/NPC/6race.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/world/objects/potted_plants.tscn" type="PackedScene" id=7]
 
 [node name="porch" type="YSort"]
 position = Vector2( 203, -37 )
@@ -39,3 +40,8 @@ door_direction = "up"
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 12, 56 )
 scale = Vector2( 1.11873, 1.11873 )
+
+[node name="potted_plants" parent="." instance=ExtResource( 7 )]
+position = Vector2( 626, 219 )
+scale = Vector2( 0.548785, 0.548785 )
+room = "room_porch"
