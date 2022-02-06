@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/world/objects/door.gd" type="Script" id=1]
 [ext_resource path="res://src/dialogues/DialoguePlayer.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="CircleShape2D" id=2]
 
 [node name="Door" type="Area2D"]
 scale = Vector2( 0.530161, 0.530161 )
@@ -11,7 +13,16 @@ collision_layer = 4
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2( 21.0581, 21.0581 )
+scale = Vector2( 28.1897, 28.1897 )
 shape = SubResource( 1 )
 
 [node name="DialoguePlayer" parent="." instance=ExtResource( 2 )]
+
+[node name="hover" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hover"]
+scale = Vector2( 10.7044, 10.7044 )
+shape = SubResource( 2 )
+
+[connection signal="mouse_entered" from="hover" to="." method="_on_hover_mouse_entered"]
+[connection signal="mouse_exited" from="hover" to="." method="_on_hover_mouse_exited"]

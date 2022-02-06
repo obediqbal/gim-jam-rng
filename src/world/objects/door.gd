@@ -8,6 +8,7 @@ export(String) var door_name
 
 func _ready():
 	object = door_name
+	is_a_door = true
 	$DialoguePlayer/Dialogue.visible = false
 
 func _input(event):
@@ -16,3 +17,14 @@ func _input(event):
 			.find_and_use_dialogue()
 		else:
 			SceneChanger.change_scene(next_room, 'fade', next_pos)
+
+
+func _process(delta):
+	if not mouse_here or len(get_overlapping_bodies())==0:
+		pass
+	else:
+		if Input.is_action_just_pressed("click") and not $DialoguePlayer/Dialogue.visible:
+			if is_door_locked:
+				.find_and_use_dialogue()
+			else:
+				SceneChanger.change_scene(next_room, 'fade', next_pos)
