@@ -233,7 +233,7 @@
         "iris_flower": [{"name": "", "text": "It is a lone Iris flower. You chuckle at the symbolism."}
         ],
         "tv_set": [{"name": "", "text": "It is a television set. You can watch it to pass the time."},
-         {"decision": true, "option":[
+         {"name": "","decision": true, "option":[
             "Pass the time.",
             "Wait."]}, [
                 [
