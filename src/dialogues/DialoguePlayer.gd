@@ -16,15 +16,17 @@ var is_choosing_decision = false
 var decision = -1
 var current_parent = []
 var current_dialogue = null
+var next_scene = null
 onready var dialogue_file = [dialogue_intro, dialogue_intro_scene, dialogue_level1]
 
-func play(current_scene, current_npc, current_room):
+func play(current_scene, current_npc, current_room, move_to_scene=null):
 	if is_dialogue_active:
 		return
 	
 	scene = current_scene
 	npc = current_npc
 	room = current_room
+	next_scene = move_to_scene
 	
 	dialogues = load_dialogues(scene)
 	is_dialogue_active = true
@@ -51,6 +53,7 @@ func next_line():
 	if current_dialogue == null:
 		current_parent = dialogues[room][npc]
 		
+		
 	if len(current_parent)==0 or current_dialogue_id >= len(current_parent):
 		$Timer.start()
 		$Dialogue.visible = false
@@ -64,6 +67,10 @@ func next_line():
 	
 		
 	current_dialogue = current_parent[current_dialogue_id]
+	
+	if current_dialogue.has('change_scene_to_path'):
+		SceneChanger.change_scene(current_dialogue['change_scene_to_path'], 'fade', Vector2(550,500))
+		return
 	print(current_dialogue)
 		
 	# atribut "name" kosong maka gunakan Dialogue Box NoName

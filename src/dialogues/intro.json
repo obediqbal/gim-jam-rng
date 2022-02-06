@@ -258,7 +258,8 @@
                 {"name": "TV", "text": "This ends the emergency alert broadcast."},
                 {"name": "TV", "text": "We now return you to regular programming."},
                 {"name": "TV", "text": "Playing at 12:15 PM, Apparation (1990) by Zerry Jucker."},
-                {"name": "TV", "text": "This ends the morning broadcast."}
+                {"name": "TV", "text": "This ends the morning broadcast."},
+                {"change_scene_to_path": "res://src/level/1/bed.tscn"}
                 ],[]
             ]
         ]
