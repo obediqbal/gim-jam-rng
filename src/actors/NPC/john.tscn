@@ -1,10 +1,39 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/character/[STILL] J0HN.png" type="Texture" id=1]
 [ext_resource path="res://src/dialogues/DialoguePlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/NPC/john.gd" type="Script" id=3]
+[ext_resource path="res://assets/character/[EFFECTS] DISTORT 1.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 255, 222 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 255, 0, 255, 222 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 222, 255, 222 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 255, 222, 255, 222 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "distort",
+"speed": 5.0
+} ]
 
 [node name="john" type="Area2D"]
 scale = Vector2( 0.733266, 0.733266 )
@@ -36,12 +65,19 @@ polygon = PoolVector2Array( -25.9115, 99.5546, -34.094, 107.737, -28.639, 121.37
 
 [node name="OnHover" type="Sprite" parent="hover"]
 visible = false
-position = Vector2( -13.6898, -92.095 )
+position = Vector2( -13.6898, -83.1895 )
 scale = Vector2( 0.625484, 0.625484 )
 texture = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hover"]
 polygon = PoolVector2Array( -49.0954, 73.6431, -15.0014, 66.8243, 23.1839, 79.0982, 61.3693, 80.4619, 66.8243, 60.0055, 49.0954, 35.4578, 31.3665, 25.9115, 16.3651, -42.2766, 38.1853, -70.9156, 57.278, -113.192, 42.2766, -159.56, 43.6404, -205.928, 42.2766, -250.932, -12.2739, -264.57, -49.0954, -263.206, -80.4619, -218.202, -66.8243, -185.472, -64.0968, -141.831, -68.1881, -98.1908, -60.0055, -66.8243, -47.7317, -25.9115, -45.0041, 6.81881, -61.3693, 30.0028, -62.733, 51.8229 )
+
+[node name="DistortAnimation" type="AnimatedSprite" parent="."]
+position = Vector2( -15.0014, -189.563 )
+scale = Vector2( 0.408666, 0.408666 )
+frames = SubResource( 7 )
+animation = "distort"
+playing = true
 
 [connection signal="mouse_entered" from="hover" to="." method="_on_hover_mouse_entered"]
 [connection signal="mouse_exited" from="hover" to="." method="_on_hover_mouse_exited"]
