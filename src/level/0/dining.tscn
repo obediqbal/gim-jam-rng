@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/world/room_dining.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/maps/DINING ROOM/[OBJECT] TABLE WITH BUMPS.png" type="Texture" id=2]
 [ext_resource path="res://src/actors/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/world/objects/door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/world/objects/brown_envelope.tscn" type="PackedScene" id=5]
+[ext_resource path="res://VISUAL ART/MAPS/DINING ROOM/[OBJECT] CHAIR COVERED FRONT.png" type="Texture" id=6]
 [ext_resource path="res://src/actors/NPC/nurse.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40.4006, 29.4275 )
 
 [node name="dining" type="YSort"]
 scale = Vector2( 1.00246, 1.00246 )
@@ -22,9 +27,6 @@ rotation = -3.14159
 scale = Vector2( 0.733, -0.733 )
 room = "room_dining"
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0, 0 )
-
 [node name="door_living" parent="." instance=ExtResource( 4 )]
 position = Vector2( 277.318, 348.144 )
 scale = Vector2( 0.440912, 0.440912 )
@@ -39,3 +41,24 @@ next_pos = Vector2( 1380, 450 )
 next_room = "res://src/level/0/hall.tscn"
 door_name = "door_hall"
 door_direction = "up"
+
+[node name="brown_envelope" parent="." instance=ExtResource( 5 )]
+position = Vector2( 541.668, 402.011 )
+scale = Vector2( 0.344841, 0.344841 )
+room = "room_dining"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="[Object]ChairCoveredFront" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 499.771, 523.712 )
+scale = Vector2( 0.291256, 0.291256 )
+z_index = 1
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 501.267, 547.154 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 0 )
+scale = Vector2( 0.95572, 0.95572 )

@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/world/objects/tv_set.gd" type="Script" id=1]
+[ext_resource path="res://src/dialogues/DialoguePlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/maps/BEDROOM/TV ON.png" type="Texture" id=4]
+[ext_resource path="res://assets/maps/BEDROOM/[OBJECT] TV AND FRAME.png" type="Texture" id=5]
+[ext_resource path="res://assets/maps/BEDROOM/TV OFF.png" type="Texture" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 182, 143 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 182, 0, 182, 143 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 143, 182, 143 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="tv_set" type="Area2D"]
+collision_layer = 4
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 63.4807, 63.4807 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -194, 0 )
+scale = Vector2( 1.28936, 1.28936 )
+texture = ExtResource( 5 )
+
+[node name="TVOff" type="AnimatedSprite" parent="."]
+position = Vector2( 3, 5 )
+scale = Vector2( 1.27478, 1.27478 )
+frames = SubResource( 5 )
+playing = true
+
+[node name="hover" type="Area2D" parent="."]
+scale = Vector2( 2.90509, 2.90509 )
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="hover"]
+scale = Vector2( 7.79307, 7.79307 )
+polygon = PoolVector2Array( -4.41704, 3.97534, 7.99485, 3.887, 8.5249, -3.93117, 7.46481, -5.91884, 5.87467, -9.7175, 2.95942, -10.2917, -2.03184, -9.40831, -4.28453, -8.5249, -5.03543, -6.00718, -5.8305, -3.09193, -5.8305, 0.530045 )
+
+[node name="OnHover" type="Sprite" parent="hover"]
+visible = false
+position = Vector2( 1.03267, 1.37689 )
+scale = Vector2( 0.437148, 0.437148 )
+texture = ExtResource( 4 )
+
+[node name="DialoguePlayer" parent="." instance=ExtResource( 2 )]
+
+[connection signal="mouse_entered" from="hover" to="." method="_on_hover_mouse_entered"]
+[connection signal="mouse_exited" from="hover" to="." method="_on_hover_mouse_exited"]

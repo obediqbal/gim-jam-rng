@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/actors/NPC/nurse.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/world/room_living.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://src/actors/NPC/sammy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/actors/NPC/mark.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/actors/NPC/barry.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/world/objects/alice_novel.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/world/objects/playing_card.tscn" type="PackedScene" id=10]
 
 [node name="living" type="YSort"]
 
@@ -39,7 +41,7 @@ scale = Vector2( 0.617208, 0.617208 )
 room = "room_living"
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3, 37 )
+position = Vector2( 369, 272 )
 scale = Vector2( 0.745322, 0.745322 )
 
 [node name="door_dining" parent="." instance=ExtResource( 5 )]
@@ -56,3 +58,14 @@ room = "room_living"
 is_door_locked = true
 door_name = "nursery_door"
 door_direction = "left"
+
+[node name="alice_novel" parent="." instance=ExtResource( 9 )]
+position = Vector2( 672, 452 )
+rotation = 1.82513
+scale = Vector2( 0.263625, 0.263625 )
+room = "room_living"
+
+[node name="playing_card" parent="." instance=ExtResource( 10 )]
+position = Vector2( 689, 428 )
+scale = Vector2( 0.330568, 0.330568 )
+room = "room_living"
