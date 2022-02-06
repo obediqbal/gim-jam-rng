@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/world/objects/amaranthus_flower.gd" type="Script" id=1]
+[ext_resource path="res://src/dialogues/DialoguePlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/maps/BEDROOM/[OBJECT] Amaranthus.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="amaranthus_flower" type="Area2D"]
+collision_layer = 4
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 63.4807, 63.4807 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 1.28936, 1.28936 )
+texture = ExtResource( 3 )
+
+[node name="hover" type="Area2D" parent="."]
+scale = Vector2( 2.90509, 2.90509 )
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="hover"]
+scale = Vector2( 7.79307, 7.79307 )
+polygon = PoolVector2Array( -3.66615, 9.49665, -2.60606, 11.396, -1.28094, 12.4561, 0.97175, 11.7493, 2.51772, 10.6892, 3.44529, 9.05494, 2.42937, 6.97893, 1.98767, 4.41704, 2.56189, 2.29686, 4.01951, 0.485875, 4.06368, -0.97175, 3.31278, -2.42937, 2.3852, -3.62198, 3.18027, -5.12377, 4.3287, -7.64149, 4.28453, -9.49665, 1.59014, -10.0709, -1.67848, -11.2635, -2.91525, -12.8536, -3.97534, -11.3518, -5.16794, -8.5249, -4.19619, -5.65382, -3.97534, -3.22444, -4.06368, -1.23677, -4.72624, 0.883409, -4.24036, 2.42937, -3.44529, 3.48947, -3.53364, 5.34462, -3.93117, 7.37646, -3.79866, 8.9666 )
+
+[node name="OnHover" type="Sprite" parent="hover"]
+visible = false
+scale = Vector2( 0.514687, 0.514687 )
+texture = ExtResource( 3 )
+
+[node name="DialoguePlayer" parent="." instance=ExtResource( 2 )]
+
+[connection signal="mouse_entered" from="hover" to="." method="_on_hover_mouse_entered"]
+[connection signal="mouse_exited" from="hover" to="." method="_on_hover_mouse_exited"]
