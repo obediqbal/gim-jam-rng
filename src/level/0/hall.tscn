@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/actors/NPC/nurse.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/world/room_hall.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://VISUAL ART/MAPS/HALL/[OBJECT] BOOK STATUE NORMAL.png" type="Texture" id=5]
 [ext_resource path="res://assets/maps/HALL/[OBJECT] PAINTING WILLIAM SHAKESPEAR.png" type="Texture" id=6]
 [ext_resource path="res://src/actors/Player/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/world/objects/door.tscn" type="PackedScene" id=8]
 
 [node name="hall" type="YSort"]
 
@@ -40,6 +41,20 @@ room = "room_hall"
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 4, -1 )
 scale = Vector2( 1.40645, 1.40645 )
+
+[node name="door_dining" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1372, 480 )
+room = "room_hall"
+next_pos = Vector2( 400, 210 )
+next_room = "res://src/level/0/dining.tscn"
+door_direction = "down"
+
+[node name="door_bed" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1372, 346 )
+room = "room_hall"
+next_pos = Vector2( 550, 590 )
+next_room = "res://src/level/0/bed.tscn"
+door_direction = "up"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 8
