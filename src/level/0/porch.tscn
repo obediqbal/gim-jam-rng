@@ -1,16 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/actors/NPC/nurse.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/world/room_porch.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/world/objects/door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/actors/NPC/john.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/actors/NPC/6race.tscn" type="PackedScene" id=6]
 
 [node name="porch" type="YSort"]
+position = Vector2( 203, -37 )
 
 [node name="room_porch" parent="." instance=ExtResource( 2 )]
 
+[node name="john" parent="." instance=ExtResource( 5 )]
+position = Vector2( 433, 486 )
+rotation = 3.14159
+scale = Vector2( 0.726142, -0.726142 )
+room = "room_porch"
+
+[node name="grace" parent="." instance=ExtResource( 6 )]
+position = Vector2( 579, 477 )
+rotation = -3.14159
+scale = Vector2( -0.593048, -0.593048 )
+room = "room_porch"
+
 [node name="nurse" parent="." instance=ExtResource( 1 )]
-position = Vector2( 351, 460 )
+position = Vector2( 388, 315 )
+scale = Vector2( -0.733, 0.733 )
 room = "room_porch"
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
@@ -20,4 +36,5 @@ next_pos = Vector2( 500, 500 )
 next_room = "res://src/level/0/living.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0, 0 )
+position = Vector2( 12, 56 )
+scale = Vector2( 1.11873, 1.11873 )
