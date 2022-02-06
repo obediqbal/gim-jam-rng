@@ -9,18 +9,18 @@
 [node name="dining" type="YSort"]
 scale = Vector2( 1.00246, 1.00246 )
 
-[node name="nurse" parent="." instance=ExtResource( 7 )]
-position = Vector2( 441.913, 541.667 )
-rotation = -3.14159
-scale = Vector2( 0.733, -0.733 )
-room = "room_dining"
-
 [node name="room_dining" parent="." instance=ExtResource( 1 )]
 
 [node name="[Object]TableWithBumps" type="Sprite" parent="room_dining"]
 position = Vector2( 503.761, 401.013 )
 scale = Vector2( 0.306607, 0.306607 )
 texture = ExtResource( 2 )
+
+[node name="nurse" parent="." instance=ExtResource( 7 )]
+position = Vector2( 441.913, 541.667 )
+rotation = -3.14159
+scale = Vector2( 0.733, -0.733 )
+room = "room_dining"
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 0 )
@@ -34,5 +34,6 @@ next_room = "res://src/level/0/living.tscn"
 [node name="door_hall" parent="." instance=ExtResource( 4 )]
 position = Vector2( 391.038, 173.573 )
 scale = Vector2( 0.400695, 0.400695 )
-next_pos = Vector2( 800, 365 )
-next_room = "res://src/level/0/living.tscn"
+next_pos = Vector2( 1380, 450 )
+next_room = "res://src/level/0/hall.tscn"
+door_name = "door_hall"
