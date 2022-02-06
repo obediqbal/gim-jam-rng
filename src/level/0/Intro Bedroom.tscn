@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/ui/OVERLAY.png" type="Texture" id=1]
+[ext_resource path="res://VISUAL ART/MAPS/BEDROOM/[BG] BEDROOM.png" type="Texture" id=2]
+[ext_resource path="res://VISUAL ART/MAPS/BEDROOM/[OBJECT] TV AND FRAME.png" type="Texture" id=3]
+[ext_resource path="res://VISUAL ART/MAPS/BEDROOM/[OBJECT] IRIS FLOWER.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="[Bg]Bedroom" type="Sprite" parent="."]
+position = Vector2( 524, 307 )
+scale = Vector2( 0.494305, 0.494305 )
+texture = ExtResource( 2 )
+
+[node name="[Object]IrisFlower" type="Sprite" parent="[Bg]Bedroom"]
+position = Vector2( 264, -44 )
+texture = ExtResource( 4 )
+
+[node name="[Object]TvAndFrame" type="Sprite" parent="[Bg]Bedroom"]
+position = Vector2( -167, -62 )
+texture = ExtResource( 3 )
+
+[node name="overlay" type="TextureRect" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 1.0
+margin_right = 1025.0
+margin_bottom = 600.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 244, 599, 246, -1, 784, 1, 785, 598, 835, 598, 836, -1, 498, -59, 192, 0, 194, 599 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 245, 599, 785, 598, 701, 613, 475, 618 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 246, 315, 302, 353, 666, 354, 688, 335, 731, 308, 782, 280, 784, 183, 241, 205 )

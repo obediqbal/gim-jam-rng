@@ -1,7 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/world/objects/door.gd" type="Script" id=1]
 [ext_resource path="res://src/dialogues/DialoguePlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/ui/ARROW UP.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/ARROW DOWN.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui/ARROW RIGHT.png" type="Texture" id=5]
+[ext_resource path="res://assets/ui/ARROW LEFT.png" type="Texture" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -23,6 +27,26 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hover"]
 scale = Vector2( 10.7044, 10.7044 )
 shape = SubResource( 2 )
+
+[node name="ArrowUp" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 105.628 )
+texture = ExtResource( 3 )
+
+[node name="ArrowRight" type="Sprite" parent="."]
+visible = false
+position = Vector2( -105.628, 0 )
+texture = ExtResource( 5 )
+
+[node name="ArrowDown" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -105.628 )
+texture = ExtResource( 4 )
+
+[node name="ArrowLeft" type="Sprite" parent="."]
+visible = false
+position = Vector2( 105.628, 0 )
+texture = ExtResource( 6 )
 
 [connection signal="mouse_entered" from="hover" to="." method="_on_hover_mouse_entered"]
 [connection signal="mouse_exited" from="hover" to="." method="_on_hover_mouse_exited"]
