@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/maps/porch/[FRONT LAYER] PORCH.png" type="Texture" id=1]
 [ext_resource path="res://assets/maps/porch/[BG] PORCH.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/OVERLAY.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 697.723, 52.391 )
 
 [node name="room_porch" type="YSort"]
 
@@ -10,12 +13,10 @@
 collision_layer = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-visible = false
-polygon = PoolVector2Array( 168, 551, 168, 245, 298, 247, 300, 393, 448, 391, 447, 416, 455, 415, 455, 344, 325, 341, 328, 233, 353, 235, 361, 250, 455, 248, 459, 235, 581, 235, 584, 244, 679, 245, 683, 232, 691, 233, 694, 338, 574, 343, 566, 344, 568, 415, 576, 416, 577, 392, 721, 393, 721, 248, 858, 248, 859, 565, 877, 564, 875, 188, 714, 183, 715, 68, 306, 69, 306, 187, 146, 184, 149, 561, 170, 562 )
+polygon = PoolVector2Array( 168, 551, 168, 245, 298, 247, 300, 393, 448, 391, 447, 416, 455, 415, 455, 344, 455, 333, 334, 337, 332, 253, 455, 248, 459, 235, 581, 235, 584, 244, 694, 247, 691, 334, 577, 337, 566, 344, 568, 415, 576, 416, 577, 392, 721, 393, 721, 248, 858, 248, 859, 565, 877, 564, 875, 188, 714, 183, 715, 68, 306, 69, 306, 187, 146, 184, 149, 561, 170, 562 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
-visible = false
-polygon = PoolVector2Array( 161, 559, 869, 565, 869, 555, 157, 552 )
+polygon = PoolVector2Array( 161, 559, 869, 565, 869, 554, 159, 549 )
 
 [node name="bg" type="TextureRect" parent="."]
 show_behind_parent = true
@@ -29,28 +30,32 @@ rect_scale = Vector2( 0.3, 0.3 )
 mouse_filter = 2
 texture = ExtResource( 2 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-margin_left = 63.0
-margin_right = 3063.0
-margin_bottom = 1949.0
-rect_scale = Vector2( 0.3, 0.3 )
-mouse_filter = 2
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 513, 342 )
+scale = Vector2( 0.516976, 0.516976 )
+
+[node name="TextureRect2" type="Sprite" parent="StaticBody2D2"]
+position = Vector2( -864.869, -670.75 )
+scale = Vector2( 0.583529, 0.583529 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 8.30621, 365.752 )
+shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 512, 304 )
 current = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="overlay" type="TextureRect" parent="Camera2D"]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
 margin_left = -512.0
 margin_top = -300.0
 margin_right = 512.0
@@ -58,5 +63,6 @@ margin_bottom = 300.0
 mouse_filter = 2
 texture = ExtResource( 3 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
