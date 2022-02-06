@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/character/[STILL] MA2K.png" type="Texture" id=1]
 [ext_resource path="res://src/dialogues/DialoguePlayer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/actors/NPC/nurse.gd" type="Script" id=3]
+[ext_resource path="res://src/actors/NPC/mark.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -33,6 +33,7 @@ polygon = PoolVector2Array( -25.2882, 111.863, 16.9884, 117.318, 60.6288, 105.04
 [node name="hover" type="Area2D" parent="."]
 
 [node name="OnHover" type="Sprite" parent="hover"]
+visible = false
 position = Vector2( 1.90735e-06, -85.917 )
 scale = Vector2( 0.562165, 0.562165 )
 texture = ExtResource( 1 )

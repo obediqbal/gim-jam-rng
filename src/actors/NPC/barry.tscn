@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/character/[STILL] b4RRY.png" type="Texture" id=1]
 [ext_resource path="res://src/dialogues/DialoguePlayer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/actors/NPC/nurse.gd" type="Script" id=3]
+[ext_resource path="res://src/actors/NPC/barry.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
