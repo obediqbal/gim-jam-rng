@@ -2,5 +2,5 @@ extends "NPC.gd"
 
 
 func _ready():
-	npc = "j0hn"
+	npc = "John"
 	$DialoguePlayer/Dialogue.visible = false
