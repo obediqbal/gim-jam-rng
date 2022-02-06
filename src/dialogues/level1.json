@@ -1,172 +1,366 @@
 {
+    "room_bed":{
+        "picture_frame": [{"name": "", "text": "It's a framed picture of a blury family."}
+        ],
+        "amaranthus_flower": [{"name": "", "text": "It is a lone Amaranthus flower. You chuckle at the symbolism."}
+    ],
+        "tv_set": [{"name": "", "text": "It is a television set. You can watch it to pass the time."},
+            {"decision": true, "option":[
+            "Pass the time.",
+            "Wait."]}, [
+            [
+            {"name": "TV", "text": "…"},
+            {"name": "TV", "text": "Patrick?"},
+            {"name": "TV", "text": "Yes Demi?"},
+            {"name": "TV", "text": "Do you love me, Patrick?"},
+            {"name": "TV", "text": "What do you think?"},
+            {"name": "TV", "text": "Why don’t you ever say it?"},
+            {"name": "TV", "text": "What do you mean? I say it all the time."},
+            {"name": "TV", "text": "You say ‘ditto’ and that’s not the same."},
+            {"name": "TV", "text": "Sometimes I just need to hear it."},
+            {"name": "TV", "text": "..."},
+            {"name": "TV", "text": "... What if I show it?"},
+            {"name": "", "text": "The man shrinks down onto one knee and unveils a diamond ring. "},
+            {"name": "TV", "text": "I don’t believe this."},
+            {"name": "TV", "text": "I’ll do anything. The day I found a reason to smile, was the day I found you. Will you let me be the reason for your smile?"},
+            {"name": "TV", "text": "Yes! I’ve wanted to say that to you for so long."},
+            {"name": "", "text": "The man looks up at the woman, whose eyes are filled with tears of joy. As a phone number appears on screen."},
+            {"name": "", "text": "Suddenly text appears on the screen."},
+            {"name": "TV", "text": "This could be you."},
+            {"name": "TV", "text": "..."},
+            {"name": "TV", "text": "We now return you to your regular programming."},
+            {"name": "TV", "text": "Playing at 15:00 PM, Recall totally (2012) by Wise Lenman"},
+            {"name": "TV", "text": "This ends the morning broadcast."}
+            ],[]
+        ]
+    ]
+    },
     "room_living":{
+        "chess_board":[
+            {"name": "", "text": "You played some chess."}
+        ],
+        "alice_novel":[
+            {"name": "", "text": "You see a book called 'What has Alice forgotten?' It has a girl in a blue gown on the cover, followed by author’s name Moriarty. L."}
+        ],
+        "book_shelf":[
+            {"name": "", "text": "It’s a bookshelf with many books. You see three books that are sticking out. 1. 'How to treat your grandkids. By George R.R.M.', 2. 'Tips on asking out your best friend. Julius C.', 3. 'My dearest, Isabella.' by Anonymous."}
+        ],
+        "nurse": [
+            {"name": "Nurse", "text": "Mr. Walter."},
+            {"name": "You", "text": "Nurse."},
+            {"name": "Nurse", "text": "Finally spending some time outside of your room I see?"},
+            {"decision": true, "option":[
+                "Rude response","Measured response"
+            ]},[
+                [
+                    {"name": "Nurse", "text": "You better stop that"}
+                ],
+                [
+                    {"name": "You", "text": "I find the company there. Much more appealing."},
+                    {"name": "Nurse", "text": "Fine."}
+                ]
+            ]
+        ],
         "ma2k": [
-            {"name": "MA2K", "text": "OH! Hello."},
-            {"name": "Player", "decision": false, "option":[
+            {"name": "", "text": "You come upon Mark, reading a bunch of papers."},
+            {"name": "MARK", "text": "OH! Hello."},
+            {"name": "", "decision": false, "option":[
                 "Oh hi Mark.",
                 "Hello to you too."
             ]},
-            {"name": "MA2K", "text": "W-who? OH! You're still here."},
-            {"name": "Player", "decision": false, "option":[
+            {"name": "MARK", "text": "W-who? OH! You're still here."},
+            {"name": "", "decision": false, "option":[
                 "Ask about the papers he's reading"
             ]},
-            {"name": "MA2K", "text": "The papers? W-Wha OH you mean the this? Yes, theres grammatical corrections on the pages, and some side notes. However, I’m still not sure what it is. "},
-            {"name": "Player", "decision": false, "option":[
+            {"name": "MARK", "text": "It is filled with grammatical corrections scribbled all over the pages, and there are some small markings on the sides. However, I’m still not able to make out what it is."},
+            {"name": "You", "decision": false, "option":[
                 "It could be important to somebody.",
                 "Is it a fun read?",
                 "Might I have a glance?"
             ]},
-            {"name": "MA2K", "text": "Have a look yourself"},
-            {"name": "Player", "decision": false, "item": "manuscript", "option":[
+            {"name": "MARK", "text": "Have a look yourself"},
+            {"name": "", "decision": false, "item": "manuscript", "option":[
                 "Look at the manuscripts"
             ]},
-            {"name": "MA2K", "text": "..."},
-            {"name": "Player", "text": "I think it's part of a ", "decision": false, "option":[
-                "Manuscript.",
-                "Speech.",
-                "Fanfiction."
-            ]},
-            {"name": "MA2K", "text": "W-what? OH it might be... So what are you up to now?"},
-            {"name": "Player", "decision": false, "option":[
+            {"name": "", "text": "He hands you a collection of papers held together by a thin paper clip. The papers seem dry with age, and there are smudges from pen markings on the borders."},
+            {"name": "", "text": "The title of the page is written as, 'My dearest Isabella'. By Anonymous."},
+            {"name": "", "text": "You read the paper and it appears to be an annecdotal story of a woman who goes by the name Isabella. It details her entire livelihood written by the perspective of a lover."},
+            {"name": "", "text": "It seems like a really interesting read, but the rest of the writing appears to have faded out."},
+            {"name": "", "text": "There is indeed scribblings of gramatical corrections in red pen all over the pages, as well as what seems to be editorial notes. Signed by letters. R.J.W. in red ink. "},
+            {"name": "MARK", "text": "..."},
+            {"name": "You", "text": "It reminds me of a manuscript. Like for a book."},
+            {"name": "MARK", "text": "W-what? OH it might be... So what are you up to now?"},
+            {"name": "You", "decision": false, "option":[
                 "Finishing my to do list and meeting the nurse.",
                 "Looking for ghosts",
                 "Meeting everyone?"
             ]},
-            {"name": "MA2K", "text": "W-Who? OH!"}
+            {"name": "MARK", "text": "W-Who? OH!"}
         ],
         "b4rry":[
-            {"name": "B4RRY", "text": "Hee-hee, do you wanna play cards?"},
-            {"name": "Player", "decision": true, "option":[
+            {"name": "BARRY", "text": "Hee-hee, Hey there Robert. Mark is busy reading... something... "},
+            {"name": "BARRY", "text": "So, he can't play with me... Want to play cards?"},
+            {"name": "You", "decision": true, "option":[
                 "Sure",
                 "No thanks"
             ]}, [
                 [
-                  {"name": "B4RRY", "text": "Hee-hee very fun. So, do you know any 3 player games?"},
-                  {"name": "Player", "text": "..."},
-                  {"name": "Player", "text": "You mean me, right?"},
-                  {"name": "B4RRY", "text": "Of course you, it’s not like theres anyone else here. Hee-hee."},
-                  {"name": "Player", "text": "..."},
-                  {"name": "Player", "decision": false, "option":[
+                  {"name": "BARRY", "text": "Hee-hee very fun. So, do you know any 3 player games?"},
+                  {"name": "You", "text": "..."},
+                  {"name": "You", "text": "You mean 2 players, right?"},
+                  {"name": "BARRY", "text": "Oh right. 2 players, silly me. It’s not like there’s a third person here. "},
+                  {"name": "Barry", "text": "...Or is there"},
+                  {"name": "You", "decision": false, "option":[
                     "I'm just gonna go.",
                     "Goodbye"
                     ]},
-                  {"name": "B4RRY", "text": "I wonder which one said that. Hee-hee."}
+                  {"name": "BARRY", "text": "I wonder which one said that. Hee-hee."}
                 ],
                 [
-                  {"name": "B4RRY", "text": "Oh? alright then, I guess its just the two us then, hee-hee."}
+                  {"name": "BARRY", "text": "Oh? alright then, I guess its just the two us then, hee-hee."},
+                  {"name": "You", "text": "..."},
+                  {"name": "You", "text": "You mean me, right?"},
+                  {"name": "BARRY", "text": "Of course, you, it’s not like I’m talking to anyone else right now."},
+                  {"name": "Barry", "text": "...Or is there"},
+                  {"name": "You", "text": "..."},
+                  {"name": "You", "decision": false, "option":[
+                    "I'm just gonna go.",
+                    "Goodbye"
+                    ]},
+                    {"name": "You", "decision": false, "option":[
+                    "I'm just gonna go.",
+                    "Goodbye"
+                    ]},
+                    {"name": "BARRY", "text": "I wonder which one said that. Hee-hee."}
                 ]
             ]
         ]
     },
     "room_dining":{
+        "Candelabra":[
+            {"name": "", "text": "It's an empty candelabra. You can see dust accumulating on the holders."}
+        ],
         "5ammy":[
-            {"name": "5AMMY", "text": "_COUGH-_COUGH-"},
-            {"name": "5AMMY", "text": "-visible suffering-"},
-            {"name": "5AMMY", "text": "_COUGH-"},
-            {"name": "Player", "decision": true, "option":[
+            {"name": "SAMMY", "text": "_COUGH-_COUGH-"},
+            {"name": "SAMMY", "text": "-visible suffering-"},
+            {"name": "SAMMY", "text": "_COUGH-"},
+            {"name": "", "decision": false, "option":[
                 "Give him his water",
-                "Please close your mouth",
-                "Hows the food?"
-            ]}, [
-                [
-                    {"name": "5AMMY", "text": "-Gulp- Thank you. The food tastes so good that I ended up coughing."},
-                            {"name": "Player", "decision": false, "option":[
-                                "Its okay"
-                            ]}, 
-                            {"name": "5AMMY", "text": "-he puts down his utensils- You want to chat? Okay then."},
-                            {"name": "Player", "decision": false, "option":[
-                                "Why is it so dark in here?",
-                                "Whats new?"
-                            ]}
-                ],
-                [
-                    {"name": "5AMMY", "text": "_COUGH-_COUGH-"},
-                    {"name": "Player", "decision": true, "option":[
-                        "Oh righty, give him his water",
-                        "Are you done?"
-                    ]}, [
+                "Please close your mouth"
+                ]},
+            {"name": "", "text": "Sammy quickly drinks his water."},
+            {"name": "SAMMY", "text": "Yes... Yes.. -Cough- "},
+            {"name": "SAMMY", "text": "Thank you for bearing with that. The food tastes so good that I ended up coughing."},
+            {"name": "You", "text": "It is okay."},
+            {"name": "", "text": "Sammy puts down his utensils on his plate and looks at you."},
+            {"name": "SAMMY", "text": " You want to chat? Okay then."},
+            {"name": "", "decision": true, "option":[
+                    "Whats new",
+                    "Suspicious things"]},
+                    [
                         [
-                            {"name": "5AMMY", "text": "-Gulp- Thank you. The food tastes so good that I ended up coughing."},
-                            {"name": "Player", "decision": false, "option":[
-                                "Its okay"
-                            ]}, 
-                            {"name": "5AMMY", "text": "-he puts down his utensils- You want to chat? Okay then."},
-                            {"name": "Player", "decision": false, "option":[
-                                "Why is it so dark in here?",
-                                "Whats new?"
-                            ]}
-                        ],
-                        [
-                            {"name": "5AMMY", "text": "Yes.. yes..."},
-                            {"name": "5AMMY", "text": "-he puts down his utensils- You want to chat? Okay then."},
-                            {"name": "Player", "decision": false, "option":[
-                                "Why is it so dark in here?",
-                                "Whats new?"
-                            ]}
-                        ]
+                        {"name": "You", "text": "Is there anything new that is going on? "}, 
+                        {"name": "Sammy", "text": "New? Not much. Although, they finally unpacked this table, took them forever to do it. Between us gentleman… I’d say the nurse was stalling for something."},
+                        {"name": "SAMMY", "text": "Oh. And I was able to swipe this sort of envelope off the nurse without her noticing."},
+                        {"name": "SAMMY", "text": "It was a collection of papers. But… I couldn’t read it."},
+                        {"name": "You", "text": "Oh… Really? Where is it now?"},
+                        {"name": "Sammy", "text": "I gave up, so I gave it to Mark."},
+                        {"name": "You", "text": "Hmm, Okay… Thanks Sammy. "},
+                        {"name": "SAMMY", "text": "Yes... Yes.. -Cough- "}
+                    ]
+                    ] ,
+                    [
+                        {"name": "You", "text": "Have you seen anything… Peculiar while you were in here? "}, 
+                        {"name": "Sammy", "text": "Peculiar? As in what? "},
+                        {"name": "You", "text": "As in..."}, 
+                        {"name": "", "decision": true, "option":[
+                            "weird sounds or figures?",
+                            "suspicious dossiers?"]},
+                            [
+                                [
+                                    {"name": "SAMMY", "text": "Uh… No, I don’t think so. Why? Are you seeing or hearing things?"},
+                                    {"name": "You", "text": "..."},
+                                    {"name": "SAMMY", "text": "..."},
+                                    {"name": "Sammy", "text": "Maybe you should get a mental wellbeing assessment."},
+                                    {"name": "You", "text": "... Really Sammy?"},
+                                    {"name": "SAMMY", "text": "It was just a thought. No need to get worked up about it. It’s probably normal."},
+                                    {"name": "SAMMY", "text": "Anyway, Mark and Barry are in the other room, maybe you can ask them about it. I’m going to continue eating."},
+                                    {"name": "You", "text": "Fine... Thanks Sammy"}
+                                ],[
+                                    {"name": "SAMMY", "text": "As in papers and files? "},
+                                    {"name": "You", "text": "Yes. Supposedly a brown sealed envelope or anything similar?"},
+                                    {"name": "SAMMY", "text": "Actually. There was an envelope around here not so long ago. I managed to take a few papers without the Nurse noticing. "},
+                                    {"name": "Sammy", "text": "It was a collection of papers. But… I couldn’t read it. "},
+                                    {"name": "You", "text": "Oh… Really? Where is it now?"},
+                                    {"name": "SAMMY", "text": "I gave up, so I gave it to Mark."},
+                                    {"name": "You", "text": "Hmm, Okay... Thanks Sammy"}
+                                ]
+                            ]
                     ]
                 ],
-                [
-                    {"name": "5AMMY", "text": "_COUGH-_COUGH-"},
-                    {"name": "Player", "decision": true, "option":[
-                        "Oh righty, give him his water",
-                        "Are you done?"
-                    ]}, [
+                "nurse": [
+                    {"name": "Nurse", "text": "Hello, Mr. Walter."},
+                    {"name": "You", "text": "Nurse."},
+                    {"name": "Nurse", "text": "As you can see, I have finished setting up the dining room. "},
+                    {"name": "Nurse", "text": "How have you been spending your time so far?"},
+                    {"decision": true, "option":[
+                        "Been exploring","Watching TV"
+                    ]},[
                         [
-                            {"name": "5AMMY", "text": "-Gulp- Thank you. The food tastes so good that I ended up coughing."},
-                            {"name": "Player", "decision": false, "option":[
-                                "Its okay"
-                            ]}, 
-                            {"name": "5AMMY", "text": "-he puts down his utensils- You want to chat? Okay then."},
-                            {"name": "Player", "decision": false, "option":[
-                                "Why is it so dark in here?",
-                                "Whats new?"
-                            ]}
-                        ],
+                            {"name": "You", "text": "I've gone here and there. "},
+                            {"name": "Nurse", "text": "I see... Any favorite spots?"},
+                            {"decision": true, "option":[
+                                "Don't tell","Tell"
+                            ]},[
+                                [
+                                    {"name": "You", "text": "Why do I need to tell you?"},
+                                    {"name": "Nurse", "text": "..."},
+                                    {"name": "Nurse", "text": "Fine then..."},
+                                    {"name": "Nurse", "text": "Sorry, I have things to do. i'll see you in my nursery soon. Yes?"}
+                                ],
+                                [
+                                    {"name": "You", "text": "Well... I have really liked- "},
+                                    {"decision": false, "option":[
+                                        "my room.", "the hallways.", "the dining room.", "the porch.", "the living room."]},   
+                                    {"name": "Nurse", "text": "Hmmm..."},
+                                    {"name": "You", "text": "What?"},
+                                    {"name": "Nurse", "text": "That's concerning."},
+                                    {"name": "You", "text": "Why is it concerning?"},
+                                    {"name": "Nurse", "text": "Well..."},
+                                    {"name": "Nurse", "text": "..."},
+                                    {"name": "Nurse", "text": "No, nevermind. It's none of your concern right now..."},
+                                    {"name": "Nurse", "text": "Sorry, I have things to do. I'll see you in my nursery soon. Yes?"}
+                            ]
+                        ]
+                    ],
                         [
-                            {"name": "5AMMY", "text": "Yes.. yes..."},
-                            {"name": "5AMMY", "text": "-he puts down his utensils- You want to chat? Okay then."},
-                            {"name": "Player", "decision": false, "option":[
-                                "Why is it so dark in here?",
-                                "Whats new?"
-                            ]}
+                            {"name": "You", "text": "I've just been watching TV."},
+                            {"name": "Nurse", "text": "..."},
+                            {"name": "You", "text": "..."},
+                            {"name": "Nurse", "text": "What did you see."},
+                            {"name": "You", "text": "..."},
+                            {"decision": false, "option":[
+                                "elaborate"
+                            ]},
+                            {"name": "You", "text": "Well at first, I was watching a comedy show. Then the screen suddenly had static and an emergency message appeared. "},
+                            {"name": "Nurse", "text": "Okay… continue."},
+                            {"name": "Nurse", "text": "Well, it was something similar to a national emergency alert system and a voice started speaking-"},
+                            {"name": "", "text": "The nurse cuts you off."},
+                            {"name": "Nurse", "text": "Was it a woman's voice?? What did she say?"},
+                            {"name": "You", "text": "Uh, no… It was sort of robotic, so I'm not too sure. And it said to follow some instructions. "},
+                            {"name": "Nurse", "text": "..."},
+                            {"name": "Nurse", "text": "And? What were they?"},
+                            {"name": "You", "text": "I'm not sure. All that played was this children’s cartoon. "},
+                            {"name": "Nurse", "text": "Hmm. Interesting… What could she be planning? "},
+                            {"name": "You", "text": "Pardon? Who?"},
+                            {"name": "Nurse", "text": "Ha... Ha. Ha… Sorry. I forgot you were still here."},
+                            {"name": "Nurse", "text": "Anyways, you shouldn't watch too much TV. "},
+                            {"name": "Nurse", "text": "Television can influence people's minds. Can make people think..."},
+                            {"name": "Nurse", "text": "...differently."},
+                            {"name": "Nurse", "text": "but anyways. You do you. You'll be meeting in my nursery Room, yes? Goodbye."}
                         ]
                     ]
-                ]
+                ]            
+    },
+
+    "room_hall":{
+        "glass_portrait": [
+            {"name": "", "text": "It’s a window decorated as a glass mosaic; it’s portraying some sort of spiritual character. "}
+        ],
+        "painting_right":[
+            {"name": "", "text": "It’s a painting of a man in Elizabethan era clothing. The name Will.I.was. Shookspear is engraved on the decorated edging."}
+        
+        ],
+        "painting_middle":[
+            {"name": "", "text": "It’s a portrait of a woman in a weird witchhat. The name Rowling JK is engraved on the decorated edging."}
+        
+        ],
+        "painting_left":[
+            {"name": "", "text": "It’s a crude painting of a man holding a book with 3 pigs on it’s cover. The name Orwell George is engraved on the decorated edging."}
+        ],
+        "book_statue":[
+        {"name": "", "text": "It’s a book sculpture with the words “My dearest-” etched onto the pages, the rest has crumbled from age. Accompanied by a plaque saying: 'Write what should not be forgotten.'"}
+        ],
+
+        "nurse": [
+            {"name": "Nurse", "text": "The art exhibit is at the end of the hall. [Please] don’t [forget] your belongings and [please] refrain from [break]ing the artworks."},
+            {"name": "You", "text": "What are the art exhibits for?"},
+            {"name": "Nurse", "text": "It is a showcase of paintings and pottery. Related to... "},
+            {"name": "Nurse", "text": "..."},
+            {"name": "Nurse", "text": "Something..."},
+            {"name": "You", "text": "Elaboration please?"},
+            {"name": "Nurse", "text": "..."},
+            {"name": "Nurse", "text": "No."},
+            {"name": "You", "text": "..."},
+            {"name": "Nurse", "text": "I mean... Sorry. I do not know any more about this topic."}
+        ],
+
+        "ow3n":[
+            {"name":"", "text": "Owen is closely observing a painting. "},
+            {"name":"You", "text": "Hello Owen."},
+            {"name":"", "text": "..."},
+            {"name":"Owen", "text": "Do you remember much about this fellow?"},
+            {"name":"You", "text": "About Orwell George?"},
+            {"name":"Owen", "text": "Yes... Did you know that was his pen name?"},
+            {"name":"You", "text": "It is?"},
+            {"name":"Owen", "text": "Mhm... Try to guess whis real name."},
+            {"name": "You", "decision": false, "option":[
+                "Joe Mangohello", "Matthematics Mercer", "Elrick Ablair"
+            ]},
+            {"name":"Owen", "text": "Mmm… Close. It’s Eric Arthur Blair. Hehe…"},
+            {"name":"", "text": "..."},
+            {"name": "You", "decision": true, "option":[
+                "Are you a fan?",
+                "Who cares about books.",
+                "-Leave-"
+            ]},[
+                [
+                    {"name":"You", "text": "Are you a fan of his? "},
+                    {"name":"Owen", "text": "Not me personally. I have a friend who is… or rather was. "},
+                    {"name":"You", "text": "I hope I meet him someday..."},
+                    {"name":"Owen", "text": "Hehe...actually, You've already met him."},
+                    {"name":"Owen", "text": "It was you! Silly goose."},
+                    {"name":"Owen", "text": "Infact you wrote an entire paper on this man. When you were studying for your…. Mmm... Master? Master of words? No.. no thats not it."},
+                    {"name": "You", "decision": false, "option":[
+                        "Master of arts.",
+                        "Master jedi.",
+                        "Master and slave???"]},
+                    {"name":"Owen", "text": "Mmm... Yes, yes, I think I remember making fun of you for it. Master of arts."},   
+                    {"name":"Owen", "text": "Anyway… Sorry to keep you occupied for so long. See you around."}        
+                ],[
+                    {"name":"Owen", "text": "Write what should not be forgotten…"},
+                    {"name":"You", "text": "Did you get that from a statue?"},
+                    {"name":"Owen", "text": "Mmm… Actually, I got it from you. It was your saying after all. "},
+                    {"name":"Owen", "text": "Anyway… Sorry to keep you occupied for so long. See you around. "}
+                ],
+                []
+                
             ]
         ]
     },
-    "room_hall":{
-        "ow3n":[
-            {"name":"", "text": "OW3n is standing"},
-            {"name":"OW3n", "text": "Talks about orwell george. Did you know that was his pen name? Mmm... His name.. Now what was his real name again.."},
-            {"name": "Player", "decision": false, "option":[
-                "Eric Arthur Blair"
-            ]},
-            {"name":"OW3n", "text": "Mmm... Yes.. Yes thats right.. Mr Eris Arthur Blair."},
-            {"name":"OW3n", "text": "Mmm... Thats not common knowledge... How do you know that?"},
-            {"name": "Player", "decision": false, "option":[
-                "umm idk.",
-                "I read it in a book?",
-                "It's a common name."
-            ]},
-            {"name":"OW3n", "text": "Mmm... Oh silly me... you were the on who studied him wasn't it? Mmm..."},
-            {"name":"OW3n", "text": "Master? Master of words? No.. no thats not it."},
-            {"name": "Player", "decision": false, "option":[
-                "Master of arts.",
-                "Master jedi.",
-                "Master and slave."
-            ]},
-            {"name":"OW3n", "text": "Mmm... Master of arts, i think it was?..."},
-            {"name":"OW3n", "text": "Mmm... Yes, yes i think i remember making fun of you for it. Mhm... not a real job."},
-            {"name":"OW3n", "text": "Congratulations on the book release by the way. Mhm... I really like reading..."},
-            {"name":"OW3n", "text": "Mmm... what was it? Mmm.."},
-            {"name": "Player", "decision": false, "option":[
-                "B-book release?",
-                "Thanks.",
-                "Mmm..?"
-            ]},
-            {"name":"OW3n", "text": "Mmm..."}
+    "room_porch":{
+        "potted_plants":[
+            {"name":"", "text": "It’s dead plants in a pot, just twigs and stems."}
+        ],
+        "trashcan":[
+            {"name":"", "text": "It’s a trashcan."},
+            {"name": "", "decision": true, "option":[
+                "Open","-Leave-"
+            ]},[
+                [
+                {"name":"", "text": "There is a paper bag filled with sandwiches inside."},
+                {"name":"", "text": "There is also a pink note beside the bag. "},
+                {"name":"", "text": "'Hi Grandpa, It’s G!'"},
+                {"name":"", "text": "'If you check inside the bag you will find… Egg Sandwiches our family favorite!'"},
+                {"name":"", "text": "'The nurse lady told us we couldn’t visit you because you were performing tests and stuff so I made her give this letter to you!'"},
+                {"name":"", "text": "'Hope you're having fun!"},
+                {"name":"", "text": "'Your granddaughter,'"},
+                {"name":"", "text": "'-G'"}
+                ]
+            ]
+
+            
+            
         ]
     }
 }
