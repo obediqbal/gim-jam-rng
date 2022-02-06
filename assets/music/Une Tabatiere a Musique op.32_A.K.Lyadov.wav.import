@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Une Tabatiere a Musique op.32_A.K.Lyadov.wav-4c373c6d8a59d90b4389707b0a65eb81.sample"
+
+[deps]
+
+source_file="res://assets/music/Une Tabatiere a Musique op.32_A.K.Lyadov.wav"
+dest_files=[ "res://.import/Une Tabatiere a Musique op.32_A.K.Lyadov.wav-4c373c6d8a59d90b4389707b0a65eb81.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

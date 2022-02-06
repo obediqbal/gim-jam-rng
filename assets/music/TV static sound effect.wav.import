@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/TV static sound effect.wav-462213c626835fcff48bdbc2d8e87b51.sample"
+
+[deps]
+
+source_file="res://assets/music/TV static sound effect.wav"
+dest_files=[ "res://.import/TV static sound effect.wav-462213c626835fcff48bdbc2d8e87b51.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

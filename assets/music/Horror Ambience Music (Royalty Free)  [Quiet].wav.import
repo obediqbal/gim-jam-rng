@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Horror Ambience Music (Royalty Free)  [Quiet].wav-b340b4e2864aa4b3cd1096764a5a3c5a.sample"
+
+[deps]
+
+source_file="res://assets/music/Horror Ambience Music (Royalty Free)  [Quiet].wav"
+dest_files=[ "res://.import/Horror Ambience Music (Royalty Free)  [Quiet].wav-b340b4e2864aa4b3cd1096764a5a3c5a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

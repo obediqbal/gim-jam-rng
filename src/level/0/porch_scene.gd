@@ -5,6 +5,8 @@ var level = 1
 func _ready():
 	$Control/AnimationPlayer.play('black')
 	$DialoguePlayer/Dialogue.visible = false
+	Global.porch_visited_0 = true
+	BackgroundMusic.play()
 
 
 func find_and_use_dialogue():

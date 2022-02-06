@@ -58,6 +58,7 @@ func next_line():
 		$Dialogue.visible = false
 		turn_on_player()
 		current_dialogue = null
+		$SFX.stop()
 		return
 		
 	$Dialogue/Options/Choice1.visible = false
@@ -66,6 +67,14 @@ func next_line():
 	
 		
 	current_dialogue = current_parent[current_dialogue_id]
+	
+	if current_dialogue.has('sfx_stop'):
+		$SFX.stop()
+	
+	if current_dialogue.has('sfx'):
+		var sfx = load(current_dialogue['sfx'])
+		$SFX.stream = sfx
+		$SFX.play()
 	
 	if current_dialogue.has('change_scene_to_path'):
 		SceneChanger.change_scene(current_dialogue['change_scene_to_path'], 'fade', Vector2(550,500))

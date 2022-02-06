@@ -35,6 +35,8 @@ position = Vector2( 513, 201 )
 room = "\"room_porch\""
 next_pos = Vector2( 500, 500 )
 next_room = "res://src/level/0/living.tscn"
+next_scene = "res://src/level/0/living_scene.tscn"
+door_name = "door_living"
 door_direction = "up"
 
 [node name="Player" parent="." instance=ExtResource( 3 )]

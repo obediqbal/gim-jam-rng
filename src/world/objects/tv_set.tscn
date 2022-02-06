@@ -48,6 +48,7 @@ texture = ExtResource( 5 )
 position = Vector2( 3, 5 )
 scale = Vector2( 1.27478, 1.27478 )
 frames = SubResource( 5 )
+frame = 1
 playing = true
 
 [node name="hover" type="Area2D" parent="."]

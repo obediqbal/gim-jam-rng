@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/actors/NPC/nurse.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/world/room_living.tscn" type="PackedScene" id=2]
@@ -10,8 +10,10 @@
 [ext_resource path="res://src/actors/NPC/barry.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/world/objects/alice_novel.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/world/objects/playing_card.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/level/0/living.gd" type="Script" id=11]
 
 [node name="living" type="YSort"]
+script = ExtResource( 11 )
 
 [node name="room_living" parent="." instance=ExtResource( 2 )]
 
@@ -41,7 +43,7 @@ scale = Vector2( 0.617208, 0.617208 )
 room = "room_living"
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 369, 272 )
+position = Vector2( 9, 39 )
 scale = Vector2( 0.745322, 0.745322 )
 
 [node name="door_dining" parent="." instance=ExtResource( 5 )]
@@ -49,7 +51,8 @@ position = Vector2( 859, 336 )
 room = "room_living"
 next_pos = Vector2( 340, 400 )
 next_room = "res://src/level/0/dining.tscn"
-door_name = "dining_door"
+next_scene = "res://src/level/0/dining_scene.tscn"
+door_name = "door_dining"
 door_direction = "right"
 
 [node name="door_nursery" parent="." instance=ExtResource( 5 )]

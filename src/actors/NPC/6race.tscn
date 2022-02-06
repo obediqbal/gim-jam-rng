@@ -85,6 +85,7 @@ position = Vector2( -2, -155 )
 scale = Vector2( 0.610291, 0.610291 )
 frames = SubResource( 7 )
 animation = "distort"
+frame = 3
 playing = true
 
 [connection signal="mouse_entered" from="hover" to="." method="_on_hover_mouse_entered"]

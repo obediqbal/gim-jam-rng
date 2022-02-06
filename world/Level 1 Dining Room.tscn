@@ -18,12 +18,10 @@ texture = ExtResource( 2 )
 
 [node name="[Object]ChairNormalFront" type="Sprite" parent="[Bg]DiningRoom"]
 position = Vector2( 8, 666 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 
 [node name="[Object]PlateAndFood" type="Sprite" parent="[Bg]DiningRoom"]
 position = Vector2( 3.99988, -24.0001 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 4 )
 
 [node name="[Object]Chairs5" type="Sprite" parent="[Bg]DiningRoom"]
@@ -58,7 +56,6 @@ region_rect = Rect2( 32.0217, 21.0568, 292.819, 325.355 )
 
 [node name="[Object]ChandelierOff" type="Sprite" parent="[Bg]DiningRoom"]
 position = Vector2( 16, 188 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

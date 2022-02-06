@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Static TV Screen Transition Effect.wav-a7cbf67c2052bb576a2da1404284fd07.sample"
+
+[deps]
+
+source_file="res://assets/music/Static TV Screen Transition Effect.wav"
+dest_files=[ "res://.import/Static TV Screen Transition Effect.wav-a7cbf67c2052bb576a2da1404284fd07.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

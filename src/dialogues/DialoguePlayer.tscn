@@ -181,6 +181,8 @@ autowrap = true
 wait_time = 0.3
 one_shot = true
 
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="Dialogue/Options/Choice1" to="." method="_on_Choice1_pressed"]
 [connection signal="pressed" from="Dialogue/Options/Choice2" to="." method="_on_Choice2_pressed"]
 [connection signal="pressed" from="Dialogue/Options/Choice3" to="." method="_on_Choice3_pressed"]

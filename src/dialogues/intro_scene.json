@@ -1,7 +1,7 @@
 {
     "room_porch": {
         "scene": [
-            {"name": "", "text": "You hear a deep whisper coming from behind you."},
+            {"sfx":"","name": "", "text": "You hear a deep whisper coming from behind you."},
             {"name": "Male voice", "text": "Are you even awake?"},
             {"anim": "john_horror_zoom", "text": "… As I was saying. This way you can watch your shows without anyone bothering you. Isn’t that delightful?"},
             {"name": "Girl's voice (Behind you)", "text": "See? Didn’t I tell you? He isn’t going to listen."},
@@ -18,11 +18,11 @@
                     {"anim":"john_glitch","text":"Heheheheheheheheheheheh. "},
                     {"text":"We can't though"},
                     {"text":"Heh"},
-                    {"anim":"john_grace_horror", "name":"Girl's voice", "text":"HEY ENOUGH! I-"},
+                    {"sfx":"res://assets/music/Thunderstorm Sound Effects Royalty Free Sounds No Copyright.wav","anim":"john_grace_horror", "name":"Girl's voice", "text":"HEY ENOUGH! I-"},
                     {"text":"Anyway… I heard there was an entire TV Box in your room, gramps."},
                     {"name":"You", "text":"..."},
                     {"name":"Girl's voice", "text":"It’s going to rain soon… You need to get inside sooner or later. You don’t want to get sick, do you?"},
-                    {"name":"Male voice", "text":"Go on, it’ll be good for you. No-one here will bother you anymore… Well unless-"},
+                    {"sfx":"res://assets/music/Thunderstorm Sound Effects Royalty Free Sounds No Copyright.wav","name":"Male voice", "text":"Go on, it’ll be good for you. No-one here will bother you anymore… Well unless-"},
                     {"text":"did you get all that?"},
                     {"name":"You", "text":"..."}
                 ],

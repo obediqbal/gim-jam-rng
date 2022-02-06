@@ -77,7 +77,7 @@
                 "Try the handle"
             ]},[
                 [
-                    {"name": "", "text": "You knock on the door loudly. There is no reply, and the door remains silent."}
+                    {"sfx":"res://assets/music/Banging a door and knocking sound effect angry banging shaking  sounds.wav", "name": "", "text": "You knock on the door loudly. There is no reply, and the door remains silent."}
                 ],
                 [
                     {"name": "", "text": "The door handle does not budge, and the door remains shut."}
@@ -237,14 +237,14 @@
             "Pass the time.",
             "Wait."]}, [
                 [
-                {"name": "TV", "text": "The TV starts up"},
-                {"name": "TV", "text": "According to all known laws of aviation, there is no way a bee can read…"},
+                {"sfx":"res://assets/music/TV static sound effect.wav", "name": "TV", "text": "The TV starts up"},
+                {"sfx_stop":"","name": "TV", "text": "According to all known laws of aviation, there is no way a bee can read…"},
                 {"name": "TV", "text": "National Emergency Alert System capabilities…"},
                 {"name": "TV", "text": "This test message has been initiated by national alert and warning authorities in coordination with emergency alert system participants including broadcast, cable, satellite, and-…"},
                 {"name": "TV", "text": "-Important instructions will follow…"},
-                {"name": "TV", "text": "..."},
-                {"name": "TV", "text": "..."},
-                {"name": "", "text": "A white rabbit runs up on the screen."},
+                {"sfx": "res://assets/music/Static TV Screen Transition Effect.wav", "name": "TV", "text": "..."},
+                {"sfx_stop":"", "name": "TV", "text": "..."},
+                {"sfx":"res://assets/music/Une Tabatiere a Musique op.32_A.K.Lyadov.wav","name": "TV", "text": "A white rabbit runs up on the screen."},
                 {"name": "TV", "text": "Hello CHILDREN! It’s me B. The bouncing bunny!"},
                 {"name": "TV", "text": "..."},
                 {"name": "TV", "text": "You wanna hear something funny?"},
@@ -255,10 +255,12 @@
                 {"name": "TV", "text": "Take a carrot whenever I am hungry.” When I saw who had written the note, it surprised me."},
                 {"name": "TV", "text": "It turns out, it was me! I forgot about them! Isn’t that funny? It’s like I was playing hide and seek with my mind!"},
                 {"name": "TV", "text": "So... Remember kids..."},
-                {"name": "TV", "text": "This ends the emergency alert broadcast."},
+                {"sfx_stop":"", "sfx":"res://assets/music/Static TV Screen Transition Effect.wav","name": "TV", "text": "..."},
+                {"sfx": "res://assets/music/EAS Alert Sound FX.wav","name": "TV", "text": "This ends the emergency alert broadcast."},
                 {"name": "TV", "text": "We now return you to regular programming."},
-                {"name": "TV", "text": "Playing at 12:15 PM, Apparation (1990) by Zerry Jucker."},
-                {"name": "TV", "text": "This ends the morning broadcast."},
+                {"sfx_stop":"", "sfx":"res://assets/music/Static TV Screen Transition Effect.wav","name": "TV", "text": "..."},
+                {"sfx":"res://assets/music/LOCAL 58 WCLV TV Music.wav","name": "TV", "text": "Playing at 12:15 PM, Apparation (1990) by Zerry Jucker."},
+                {"sfx_stop":"", "sfx":"res://assets/music/TV static sound effect.wav","name": "TV", "text": "This ends the morning broadcast."},
                 {"change_scene_to_path": "res://src/level/1/bed.tscn"}
                 ],[]
             ]

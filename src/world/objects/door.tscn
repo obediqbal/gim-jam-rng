@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/world/objects/door.gd" type="Script" id=1]
 [ext_resource path="res://src/dialogues/DialoguePlayer.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/ui/ARROW DOWN.png" type="Texture" id=4]
 [ext_resource path="res://assets/ui/ARROW RIGHT.png" type="Texture" id=5]
 [ext_resource path="res://assets/ui/ARROW LEFT.png" type="Texture" id=6]
+[ext_resource path="res://assets/music/Banging a door and knocking sound effect angry banging shaking  sounds.wav" type="AudioStream" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -47,6 +48,9 @@ texture = ExtResource( 4 )
 visible = false
 position = Vector2( 105.628, 0 )
 texture = ExtResource( 6 )
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
 
 [connection signal="mouse_entered" from="hover" to="." method="_on_hover_mouse_entered"]
 [connection signal="mouse_exited" from="hover" to="." method="_on_hover_mouse_exited"]
