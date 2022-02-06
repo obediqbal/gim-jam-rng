@@ -27,7 +27,6 @@ func play(current_scene, current_npc, current_room, move_to_scene=null):
 	npc = current_npc
 	room = current_room
 	next_scene = move_to_scene
-	
 	dialogues = load_dialogues(scene)
 	is_dialogue_active = true
 	
