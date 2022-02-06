@@ -4,6 +4,20 @@ extends "Player.gd"
 func _physics_process(delta):
 	var direction := get_direction()
 	var velocity := Vector2(direction.x*speed, direction.y*speed)
+	if velocity!=Vector2.ZERO:
+		$AnimatedSprite.visible = true
+		$Sprite.visible = false
+		$AnimatedSprite.play()
+		if direction.x>0:
+			$AnimatedSprite.flip_h = true
+			$Sprite.flip_h = true
+		else:
+			$AnimatedSprite.flip_h = false
+			$Sprite.flip_h = false
+	else:
+		$AnimatedSprite.visible = false
+		$Sprite.visible = true
+		$AnimatedSprite.stop()
 	move_and_slide(velocity)
 
 
