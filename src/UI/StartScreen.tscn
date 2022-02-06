@@ -94,9 +94,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -113.327
-margin_top = -20.61
+margin_top = -20.1364
 margin_right = -48.3271
-margin_bottom = -6.60999
+margin_bottom = -6.13641
 rect_scale = Vector2( 3.21663, 3.21663 )
 custom_fonts/font = SubResource( 1 )
 text = "Credits"
@@ -107,4 +107,4 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="StartGameButton" to="." method="_on_StartGameButton_pressed"]
-[connection signal="pressed" from="CreditsGameButton" to="." method="_on_StartGameButton_pressed"]
+[connection signal="pressed" from="CreditsGameButton" to="." method="_on_CreditsGameButton_pressed"]
